@@ -1,11 +1,11 @@
+import ThankYou from "@/components/Thankyou/Thankyou";
 
-import BookingReviewPage from "@/components/Booking/review"
 import React from "react"
 
 const Page = () => {
-    return (
+    return(
         <div>
-           <BookingReviewPage/>
+            <ThankYou />
         </div>
     )
 }

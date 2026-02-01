@@ -8,7 +8,9 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
-  const isHome = pathname === "/" || pathname.startsWith("/biketrip");
+  const isHome = pathname === "/" ||
+  pathname.startsWith("/biketrip") ||
+  pathname.startsWith("/package");
 
   useEffect(() => {
     if (!isHome) return;
@@ -39,7 +41,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link
           href="/"
-          className={`text-3xl font-serif text-emerald-900 tracking-wide mb-2 group-hover:text-emerald-700 transition-colors font-bold
+          className={`text-3xl font-serif tracking-wide group-hover:text-emerald-700 transition-colors font-bold
             ${
               isHome && !scrolled
                 ? "text-white"
@@ -50,9 +52,9 @@ const Navbar = () => {
           TRAVELMATE
         </Link>
 
-        {/* Menu */}
+        {/* Menu - Centered */}
         <ul
-          className={`hidden md:flex items-center gap-8 font-serif font-semibold tracking-wide transition-colors
+          className={`hidden md:flex items-center gap-8 font-serif font-semibold tracking-wide transition-colors absolute left-1/2 -translate-x-1/2
             ${
               isHome && !scrolled
                 ? "text-white"
@@ -67,7 +69,7 @@ const Navbar = () => {
             <Link href="/about">About Us</Link>
           </li>
           <li className="hover:text-emerald-600">
-            <Link href="/packages">Packages</Link>
+            <Link href="/package">Packages</Link>
           </li>
           <li className="hover:text-emerald-600">
             <Link href="/biketrip">Bike Trips</Link>
@@ -77,24 +79,19 @@ const Navbar = () => {
           </li>
         </ul>
 
-              {/* CTA Button */}
-        <div className="hidden md:block justify-self-end">
-          <Link
-            href="/packages"
-            className={`px-6 py-3 rounded-full font-serif font-semibold transition-all duration-300
-              ${
-                isHome && !scrolled
-                  ? "border border-white text-white hover:bg-white hover:text-emerald-900"
-                  : "bg-emerald-700 text-white hover:bg-emerald-800"
-              }
-            `}
-          >
-            Plan Your Journey
-          </Link>
-        </div>
-
-        {/* CTA placeholder to preserve layout */}
-        <div className="w-[180px] hidden md:block" />
+        {/* CTA Button - Right aligned */}
+        <Link
+          href="/login"
+          className={`hidden md:block px-6 py-3 rounded-full font-serif font-semibold transition-all duration-300
+            ${
+              isHome && !scrolled
+                ? "border border-white text-white hover:bg-white hover:text-emerald-900"
+                : "bg-emerald-700 text-white hover:bg-emerald-800"
+            }
+          `}
+        >
+          Plan Your Journey
+        </Link>
 
       </nav>
     </header>
