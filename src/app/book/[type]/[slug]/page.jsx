@@ -25,20 +25,61 @@ export default function BookingPage() {
 
   const [focusedField, setFocusedField] = useState(null);
 
-  if (!data) return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <div className="text-center p-8 bg-white rounded-2xl shadow-lg">
-        <div className="text-6xl mb-4">🔍</div>
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">Booking not found</h2>
-        <p className="text-gray-600">This trip doesn't seem to exist</p>
-      </div>
+  const numericPrice =
+  typeof data.price === "string"
+    ? Number(data.price.replace(/[₹,]/g, ""))
+    : data.price;
+
+
+ if (!data || !data.price) {
+  return (
+    <div className="min-h-screen flex items-center justify-center">
+      <h1 className="text-2xl font-bold text-red-600">
+        Invalid booking data
+      </h1>
     </div>
   );
+}
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  try {
+    const res = await fetch("http://localhost:5000/api/bookings", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+     body: JSON.stringify({
+  name: form.name,
+  email: form.email,
+  phone: form.phone,
+  travelers: form.travelers,
+  tripTitle: data.title,
+  price:
+    (typeof data.price === "string"
+      ? Number(data.price.replace(/[₹,]/g, ""))
+      : data.price) * form.travelers,
+}),
+
+    });
+
+    const result = await res.json();
+
+    if (!res.ok) {
+      throw new Error(result.message || "Booking failed");
+    }
+
+    // ✅ Redirect ONLY after email is sent
     router.push(`/book/thank-you?type=${type}&title=${data.title}`);
-  };
+
+  } catch (error) {
+    console.error("Booking Error:", error);
+    alert("Booking failed. Please try again.");
+  }
+};
+
 
   return (
     <main className="min-h-screen bg-gray-50 py-12 px-4">
@@ -87,8 +128,11 @@ export default function BookingPage() {
                       focusedField === 'name' ? 'text-emerald-600 scale-110' : 'text-gray-400'
                     }`} size={20} />
                     <input
-                      className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-emerald-100 focus:border-emerald-500 outline-none transition-all duration-200 bg-white hover:border-gray-300"
-                      placeholder="Enter your full name"
+                      value={form.name}
+                      className="w-full border-2 border-emerald-700 rounded-xl px-4 py-4
+  focus:outline-none focus:border-emerald-600 focus:ring-2 focus:ring-emerald-200
+  transition-all placeholder:text-gray-400"
+                      placeholder="       Enter your full name"
                       required
                       onFocus={() => setFocusedField('name')}
                       onBlur={() => setFocusedField(null)}
@@ -108,8 +152,11 @@ export default function BookingPage() {
                     }`} size={20} />
                     <input
                       type="email"
-                      className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-emerald-100 focus:border-emerald-500 outline-none transition-all duration-200 bg-white hover:border-gray-300"
-                      placeholder="you@example.com"
+                      value={form.email}
+                      className="w-full border-2 border-emerald-700 rounded-xl px-4 py-4
+  focus:outline-none focus:border-emerald-600 focus:ring-2 focus:ring-emerald-200
+  transition-all placeholder:text-gray-400"
+                      placeholder="       you@example.com"
                       required
                       onFocus={() => setFocusedField('email')}
                       onBlur={() => setFocusedField(null)}
@@ -129,8 +176,11 @@ export default function BookingPage() {
                     }`} size={20} />
                     <input
                       type="tel"
-                      className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-emerald-100 focus:border-emerald-500 outline-none transition-all duration-200 bg-white hover:border-gray-300"
-                      placeholder="+91 98765 43210"
+                      value={form.phone}
+                      className="w-full border-2 border-emerald-700 rounded-xl px-4 py-4
+  focus:outline-none focus:border-emerald-600 focus:ring-2 focus:ring-emerald-200
+  transition-all placeholder:text-gray-400"
+                      placeholder="       +91 98765 43210"
                       required
                       onFocus={() => setFocusedField('phone')}
                       onBlur={() => setFocusedField(null)}
@@ -149,7 +199,11 @@ export default function BookingPage() {
                       focusedField === 'travelers' ? 'text-emerald-600 scale-110' : 'text-gray-400'
                     }`} size={20} />
                     <select
-                      className="w-full pl-12 pr-10 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-emerald-100 focus:border-emerald-500 outline-none transition-all duration-200 bg-white hover:border-gray-300 appearance-none cursor-pointer"
+                      value={form.travelers}
+                      className="w-full border-2 border-emerald-700 rounded-xl px-4 py-4
+  focus:outline-none focus:border-emerald-600 focus:ring-2 focus:ring-emerald-200
+  transition-all placeholder:text-gray-400"
+                      placeholder="      Select nummber of travelers"
                       onFocus={() => setFocusedField('travelers')}
                       onBlur={() => setFocusedField(null)}
                       onChange={(e) =>
@@ -168,18 +222,13 @@ export default function BookingPage() {
                     </div>
                   </div>
                 </div>
-
-               <Link href="/thankyou">
-  <button
-    type="button"
-    className="group w-full bg-emerald-600 hover:bg-emerald-700 text-white py-5 rounded-xl font-bold text-lg transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-3 mt-8"
-  >
-    Confirm Booking
-    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-  </button>
-</Link>
-
-
+<button
+  type="submit"
+  className="group w-full bg-emerald-600 hover:bg-emerald-700 text-white py-5 rounded-xl font-bold text-lg transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-3 mt-8"
+>
+  Confirm Booking
+  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+</button>
                 <div className="flex items-center justify-center gap-2 text-sm text-gray-500 pt-2">
                   <Shield className="w-4 h-4 text-emerald-600" />
                   <span>Your information is secure and encrypted</span>
@@ -203,7 +252,7 @@ export default function BookingPage() {
               <div className="bg-emerald-50 rounded-2xl p-5 mb-6 border-2 border-emerald-200">
                 <div className="flex items-center gap-2 mb-2">
                   <span className="text-xs font-bold text-emerald-700 uppercase tracking-wider">
-                    {type === "biketrip" ? "🏍️ Bike Trip" : "✈️ Package Tour"}
+                    {type === "biketrip" ? " Bike Trip" : " Package Tour"}
                   </span>
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 leading-tight">{data.title}</h3>
@@ -242,7 +291,14 @@ export default function BookingPage() {
                     <div className="flex items-center justify-between text-white">
                       <div>
                         <p className="text-sm font-medium opacity-90 mb-1">Price per person</p>
-                        <p className="text-3xl font-bold">₹{data.price.toLocaleString()}</p>
+                        <p className="text-3xl font-bold">
+  ₹{(
+    typeof data.price === "string"
+      ? Number(data.price.replace(/[₹,]/g, ""))
+      : data.price
+  ).toLocaleString()}
+</p>
+
                       </div>
                       <div className="w-12 h-12 bg-white bg-opacity-20 rounded-xl flex items-center justify-center">
                         <span className="text-2xl">₹</span>
@@ -257,7 +313,8 @@ export default function BookingPage() {
                         <p className="text-xs text-emerald-600">for {form.travelers} travelers</p>
                       </div>
                       <span className="font-bold text-2xl text-emerald-700">
-                        ₹{(data.price * form.travelers).toLocaleString()}
+                        ₹{(numericPrice * form.travelers).toLocaleString()}
+
                       </span>
                     </div>
                   )}

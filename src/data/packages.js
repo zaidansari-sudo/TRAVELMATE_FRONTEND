@@ -4,7 +4,7 @@ export const packages = [
     title: "Konkan Coastal Escape",
     region: "Maharashtra Coast",
     duration: "6 Days · 5 Nights",
-    price: "₹85,000",
+    price: "85,000",
 
     images: [
       "/packages/konkan1.png",
@@ -59,13 +59,14 @@ export const packages = [
     title: "Himalayan Village Trail",
     region: "Himachal Pradesh",
     duration: "8 Days · 7 Nights",
-    price: "₹1,20,000",
+    price: "1,20,000",
 
     images: [
-      "/packages/himalaya/1.jpg",
-      "/packages/himalaya/2.jpg",
-      "/packages/himalaya/3.jpg",
-      "/packages/himalaya/4.jpg",
+      "/packages/himalaya1.png",
+      "/packages/himalaya2.png",
+      "/packages/himalaya3.png",
+      "/packages/himalaya4.png",
+      "/packages/himalaya5.png",
     ],
 
     overview:
@@ -113,14 +114,14 @@ export const packages = [
     title: "Spiti Monastic Journey",
     region: "Himachal Pradesh",
     duration: "9 Days · 8 Nights",
-    price: "₹1,45,000",
+    price: "1,45,000",
 
     images: [
-      "/packages/spiti/1.jpg",
-      "/packages/spiti/2.jpg",
-      "/packages/spiti/3.jpg",
-      "/packages/spiti/4.jpg",
-      "/packages/spiti/5.jpg",
+      "/packages/spiti1.png",
+      "/packages/spiti2.png",
+      "/packages/spiti3.png",
+      "/packages/spiti4.png",
+      "/packages/spiti5.png",
     ],
 
     overview:
@@ -170,13 +171,14 @@ export const packages = [
     title: "Shekhawati Heritage Trail",
     region: "Rajasthan",
     duration: "5 Days · 4 Nights",
-    price: "₹75,000",
+    price: "75,000",
 
     images: [
-      "/packages/shekhawati/1.jpg",
-      "/packages/shekhawati/2.jpg",
-      "/packages/shekhawati/3.jpg",
-      "/packages/shekhawati/4.jpg",
+      "/packages/shekhawati1.png",
+      "/packages/shekhawati2.png",
+      "/packages/shekhawati3.png",
+      "/packages/shekhawati4.png",
+      "/packages/shekhawati5.png",
     ],
 
     overview:
@@ -213,13 +215,13 @@ export const packages = [
     title: "Orchha & Chanderi Retreat",
     region: "Central India",
     duration: "6 Days · 5 Nights",
-    price: "₹78,000",
+    price: "78,000",
 
     images: [
-      "/packages/orchha/1.jpg",
-      "/packages/orchha/2.jpg",
-      "/packages/orchha/3.jpg",
-      "/packages/orchha/4.jpg",
+      "/packages/orchha1.png",
+      "/packages/orchha2.png",
+      "/packages/orchha3.png",
+      "/packages/orchha4.png",
     ],
 
     overview:
@@ -264,14 +266,14 @@ isFeatured: false,
     title: "Ladakh Slow Road Journey",
     region: "Ladakh",
     duration: "10 Days · 9 Nights",
-    price: "₹1,60,000",
+    price: "1,60,000",
 
     images: [
-      "/packages/ladakh/1.jpg",
-      "/packages/ladakh/2.jpg",
-      "/packages/ladakh/3.jpg",
-      "/packages/ladakh/4.jpg",
-      "/packages/ladakh/5.jpg",
+      "/packages/ladakh1.png",
+      "/packages/ladakh2.png",
+      "/packages/ladakh3.png",
+      "/packages/ladakh4.png",
+      "/packages/ladakh5.png",
     ],
 
     overview:
@@ -319,13 +321,13 @@ isFeatured: true,
   title: "Odisha Tribal Heartland",
   region: "Odisha",
   duration: "7 Days · 6 Nights",
-  price: "₹95,000",
+  price: "95,000",
 
   images: [
-    "/packages/odisha/1.jpg",
-    "/packages/odisha/2.jpg",
-    "/packages/odisha/3.jpg",
-    "/packages/odisha/4.jpg",
+    "/packages/odisha1.png",
+    "/packages/odisha2.png",
+    "/packages/odisha3.png",
+    "/packages/odisha4.png",
   ],
 
   overview:
@@ -370,13 +372,13 @@ isFeatured: false,
   title: "Meghalaya Living Roots Trail",
   region: "Meghalaya",
   duration: "6 Days · 5 Nights",
-  price: "₹88,000",
+  price: "88,000",
 
   images: [
-    "/packages/meghalaya/1.jpg",
-    "/packages/meghalaya/2.jpg",
-    "/packages/meghalaya/3.jpg",
-    "/packages/meghalaya/4.jpg",
+    "/packages/meghalaya1.png",
+    "/packages/meghalaya2.png",
+    "/packages/meghalaya3.png",
+    "/packages/meghalaya4.png",
   ],
 
   overview:
@@ -413,13 +415,13 @@ isFeatured: false,
   title: "Bastar Tribal Odyssey",
   region: "Chhattisgarh",
   duration: "7 Days · 6 Nights",
-  price: "₹92,000",
+  price: "92,000",
 
   images: [
-    "/packages/bastar/1.jpg",
-    "/packages/bastar/2.jpg",
-    "/packages/bastar/3.jpg",
-    "/packages/bastar/4.jpg",
+    "/packages/bastar1.png",
+    "/packages/bastar2.png",
+    "/packages/bastar3.png",
+    "/packages/bastar4.png",
   ],
 
   overview:
@@ -464,13 +466,13 @@ isFeatured: true,
   title: "Chettinad Heritage Sojourn",
   region: "Tamil Nadu",
   duration: "5 Days · 4 Nights",
-  price: "₹70,000",
+  price: "70,000",
 
   images: [
-    "/packages/chettinad/1.jpg",
-    "/packages/chettinad/2.jpg",
-    "/packages/chettinad/3.jpg",
-    "/packages/chettinad/4.jpg",
+    "/packages/chettinad1.png",
+    "/packages/chettinad2.png",
+    "/packages/chettinad3.png",
+    "/packages/chettinad4.png",
   ],
 
   overview:
@@ -513,13 +515,13 @@ isFeatured: false,
   title: "Kutch Desert & Craft Trail",
   region: "Gujarat",
   duration: "6 Days · 5 Nights",
-  price: "₹82,000",
+  price: "82,000",
 
   images: [
-    "/packages/kutch/1.jpg",
-    "/packages/kutch/2.jpg",
-    "/packages/kutch/3.jpg",
-    "/packages/kutch/4.jpg",
+    "/packages/kutch1.png",
+    "/packages/kutch2.png",
+    "/packages/kutch3.png",
+    "/packages/kutch4.png",
   ],
 
   overview:
@@ -563,13 +565,13 @@ isFeatured: false,
   title: "Landour & Mussoorie Slow Escape",
   region: "Uttarakhand",
   duration: "5 Days · 4 Nights",
-  price: "₹72,000",
+  price: "72,000",
 
   images: [
-    "/packages/landour/1.jpg",
-    "/packages/landour/2.jpg",
-    "/packages/landour/3.jpg",
-    "/packages/landour/4.jpg",
+    "/packages/landour1.png",
+    "/packages/landour2.png",
+    "/packages/landour3.png",
+    "/packages/landour4.png",
   ],
 
   overview:
@@ -612,13 +614,13 @@ isFeatured: true,
   title: "Rishikesh Ganga Valley Retreat",
   region: "Uttarakhand",
   duration: "6 Days · 5 Nights",
-  price: "₹80,000",
+  price: "80,000",
 
   images: [
-    "/packages/rishikesh/1.jpg",
-    "/packages/rishikesh/2.jpg",
-    "/packages/rishikesh/3.jpg",
-    "/packages/rishikesh/4.jpg",
+    "/packages/rishikesh1.png",
+    "/packages/rishikesh2.png",
+    "/packages/rishikesh3.png",
+    "/packages/rishikesh4.png",
   ],
 
   overview:
@@ -655,13 +657,13 @@ isFeatured: true,
   title: "Ooty & Nilgiri Heritage Trail",
   region: "Tamil Nadu",
   duration: "5 Days · 4 Nights",
-  price: "₹68,000",
+  price: "68,000",
 
   images: [
-    "/packages/ooty/1.jpg",
-    "/packages/ooty/2.jpg",
-    "/packages/ooty/3.jpg",
-    "/packages/ooty/4.jpg",
+    "/packages/ooty1.png",
+    "/packages/ooty2.png",
+    "/packages/ooty3.png",
+    "/packages/ooty4.png",
   ],
 
   overview:
@@ -704,13 +706,13 @@ isFeatured: true,
   title: "Darjeeling Tea & Culture Escape",
   region: "West Bengal",
   duration: "6 Days · 5 Nights",
-  price: "₹82,000",
+  price: "82,000",
 
   images: [
-    "/packages/darjeeling/1.jpg",
-    "/packages/darjeeling/2.jpg",
-    "/packages/darjeeling/3.jpg",
-    "/packages/darjeeling/4.jpg",
+    "/packages/darjeeling1.png",
+    "/packages/darjeeling2.png",
+    "/packages/darjeeling3.png",
+    "/packages/darjeeling4.png",
   ],
 
   overview:
@@ -754,13 +756,13 @@ isFeatured: false,
   title: "Mount Abu Aravalli Retreat",
   region: "Rajasthan",
   duration: "4 Days · 3 Nights",
-  price: "₹58,000",
+  price: "58,000",
 
   images: [
-    "/packages/mountabu/1.jpg",
-    "/packages/mountabu/2.jpg",
-    "/packages/mountabu/3.jpg",
-    "/packages/mountabu/4.jpg",
+    "/packages/mountabu1.png",
+    "/packages/mountabu2.png",
+    "/packages/mountabu3.png",
+    "/packages/mountabu4.png",
   ],
 
   overview:
@@ -801,13 +803,13 @@ isFeatured: false,
   title: "Pachmarhi Satpura Hills Escape",
   region: "Madhya Pradesh",
   duration: "5 Days · 4 Nights",
-  price: "₹65,000",
+  price: "65,000",
 
   images: [
-    "/packages/pachmarhi/1.jpg",
-    "/packages/pachmarhi/2.jpg",
-    "/packages/pachmarhi/3.jpg",
-    "/packages/pachmarhi/4.jpg",
+    "/packages/pachmarhi1.png",
+    "/packages/pachmarhi2.png",
+    "/packages/pachmarhi3.png",
+    "/packages/pachmarhi4.png",
   ],
 
   overview:
@@ -845,14 +847,4 @@ bestForSeason: ["Winter", "Spring"],
 isFeatured: false,
 
 },
-
-
-
-
-
-
-
-
-
-
 ];

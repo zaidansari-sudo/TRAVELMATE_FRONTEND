@@ -137,7 +137,10 @@ export default function PackageDetails() {
             <a href="#notes" className="text-gray-700 hover:text-emerald-600 font-medium transition">Important Info</a>
           </div>
           <div className="flex items-center gap-4">
-            <span className="text-2xl font-bold text-emerald-700">{pkg.price}</span>
+            <span className="text-2xl font-bold text-emerald-700">
+  ₹{pkg.price.toLocaleString()}
+</span>
+
            <Link href={`/book/package/${pkg.id}`}>
   <button className="bg-emerald-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-emerald-700 transition shadow-lg hover:shadow-xl">
     Book Now
@@ -319,7 +322,10 @@ export default function PackageDetails() {
             
             <div className="flex items-center justify-center gap-4 mb-8">
               <div className="text-left">
-                <p className="text-sm text-gray-500 line-through">₹45,999</p>
+                <p className="text-sm text-gray-500 line-through">
+  {"₹45,999"}
+</p>
+
                 <p className="text-5xl font-bold text-emerald-700">{pkg.price}</p>
                 <p className="text-sm text-gray-600 font-medium">per person</p>
               </div>

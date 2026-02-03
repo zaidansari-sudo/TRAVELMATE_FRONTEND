@@ -3,14 +3,17 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  const isHome = pathname === "/" ||
-  pathname.startsWith("/biketrip") ||
-  pathname.startsWith("/package");
+  const isHome =
+    pathname === "/" ||
+    pathname.startsWith("/biketrip") ||
+    pathname.startsWith("/package");
 
   useEffect(() => {
     if (!isHome) return;
@@ -36,12 +39,12 @@ const Navbar = () => {
         }
       `}
     >
-      <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-7">
+      <nav className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 py-6 md:py-7">
 
         {/* Logo */}
         <Link
           href="/"
-          className={`text-3xl font-serif tracking-wide group-hover:text-emerald-700 transition-colors font-bold
+          className={`text-2xl sm:text-3xl font-serif tracking-wide transition-colors font-bold
             ${
               isHome && !scrolled
                 ? "text-white"
@@ -52,7 +55,7 @@ const Navbar = () => {
           TRAVELMATE
         </Link>
 
-        {/* Menu - Centered */}
+        {/* Desktop Menu - Centered */}
         <ul
           className={`hidden md:flex items-center gap-8 font-serif font-semibold tracking-wide transition-colors absolute left-1/2 -translate-x-1/2
             ${
@@ -79,7 +82,7 @@ const Navbar = () => {
           </li>
         </ul>
 
-        {/* CTA Button - Right aligned */}
+        {/* Desktop CTA */}
         <Link
           href="/login"
           className={`hidden md:block px-6 py-3 rounded-full font-serif font-semibold transition-all duration-300
@@ -93,7 +96,58 @@ const Navbar = () => {
           Plan Your Journey
         </Link>
 
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className={`md:hidden p-2 transition-colors
+            ${
+              isHome && !scrolled
+                ? "text-white"
+                : "text-emerald-900"
+            }
+          `}
+        >
+          {menuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
       </nav>
+
+      {/* Mobile Menu */}
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-300
+          ${menuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}
+          ${
+            isHome && !scrolled
+              ? "bg-white"
+              : "bg-white"
+          }
+        `}
+      >
+        <ul className="flex flex-col items-center gap-6 py-8 font-serif font-semibold text-gray-700">
+          <li onClick={() => setMenuOpen(false)}>
+            <Link href="/">Home</Link>
+          </li>
+          <li onClick={() => setMenuOpen(false)}>
+            <Link href="/about">About Us</Link>
+          </li>
+          <li onClick={() => setMenuOpen(false)}>
+            <Link href="/package">Packages</Link>
+          </li>
+          <li onClick={() => setMenuOpen(false)}>
+            <Link href="/biketrip">Bike Trips</Link>
+          </li>
+          <li onClick={() => setMenuOpen(false)}>
+            <Link href="/contact">Contact</Link>
+          </li>
+
+          <Link
+            href="/login"
+            onClick={() => setMenuOpen(false)}
+            className="mt-4 px-6 py-3 rounded-full bg-emerald-700 text-white font-serif font-semibold hover:bg-emerald-800 transition"
+          >
+            Plan Your Journey
+          </Link>
+        </ul>
+      </div>
     </header>
   );
 };
