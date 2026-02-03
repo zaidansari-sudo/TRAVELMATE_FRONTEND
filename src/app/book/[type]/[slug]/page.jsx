@@ -7,6 +7,10 @@ import { useState } from "react";
 import { User, Mail, Phone, Users, CheckCircle, Calendar, MapPin, Clock, ArrowRight, Shield, Sparkles, Star } from "lucide-react";
 import Link from "next/link";
 
+const fadeInStyle = {
+  animation: "fade-in 0.6s ease-out",
+};
+
 export default function BookingPage() {
   const { type, slug } = useParams();
   const router = useRouter();
@@ -83,11 +87,17 @@ const handleSubmit = async (e) => {
 
   return (
     <main className="min-h-screen bg-gray-50 py-12 px-4">
+      <style>{`
+        @keyframes fade-in {
+          from { opacity: 0; transform: translateY(-10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+      `}</style>
       
       <div className="max-w-6xl mx-auto">
         
         {/* Header */}
-        <div className="text-center mb-10 animate-fade-in">
+        <div className="text-center mb-10" style={fadeInStyle}>
           <div className="inline-flex items-center gap-2 bg-emerald-100 px-5 py-2.5 rounded-full mb-4">
             <Sparkles className="w-4 h-4 text-emerald-700" />
             <span className="text-sm font-bold text-emerald-800">Secure Booking Platform</span>
@@ -128,16 +138,24 @@ const handleSubmit = async (e) => {
                       focusedField === 'name' ? 'text-emerald-600 scale-110' : 'text-gray-400'
                     }`} size={20} />
                     <input
-                      value={form.name}
-                      className="w-full border-2 border-emerald-700 rounded-xl px-4 py-4
-  focus:outline-none focus:border-emerald-600 focus:ring-2 focus:ring-emerald-200
-  transition-all placeholder:text-gray-400"
-                      placeholder="       Enter your full name"
-                      required
-                      onFocus={() => setFocusedField('name')}
-                      onBlur={() => setFocusedField(null)}
-                      onChange={(e) => setForm({ ...form, name: e.target.value })}
-                    />
+  value={form.name}
+  className="
+    w-full border-2 border-emerald-700 rounded-xl
+    pl-12 pr-4 py-4
+    text-gray-900 caret-emerald-600
+    bg-white
+    focus:outline-none focus:border-emerald-600
+    focus:ring-2 focus:ring-emerald-200
+    transition-all
+    placeholder:text-gray-400
+  "
+  placeholder="Enter your full name"
+  required
+  onFocus={() => setFocusedField('name')}
+  onBlur={() => setFocusedField(null)}
+  onChange={(e) => setForm({ ...form, name: e.target.value })}
+/>
+
                   </div>
                 </div>
 
@@ -153,10 +171,10 @@ const handleSubmit = async (e) => {
                     <input
                       type="email"
                       value={form.email}
-                      className="w-full border-2 border-emerald-700 rounded-xl px-4 py-4
-  focus:outline-none focus:border-emerald-600 focus:ring-2 focus:ring-emerald-200
+                      className="w-full border-2 border-emerald-700 rounded-xl pl-12 pr-4 py-4 text-gray-900 caret-emerald-600
+  bg-white focus:outline-none focus:border-emerald-600 focus:ring-2 focus:ring-emerald-200
   transition-all placeholder:text-gray-400"
-                      placeholder="       you@example.com"
+                      placeholder="xyz@gmail.com"
                       required
                       onFocus={() => setFocusedField('email')}
                       onBlur={() => setFocusedField(null)}
@@ -177,10 +195,10 @@ const handleSubmit = async (e) => {
                     <input
                       type="tel"
                       value={form.phone}
-                      className="w-full border-2 border-emerald-700 rounded-xl px-4 py-4
-  focus:outline-none focus:border-emerald-600 focus:ring-2 focus:ring-emerald-200
+                      className="w-full border-2 border-emerald-700 rounded-xl pl-12 pr-4 py-4 text-gray-900 caret-emerald-600
+  bg-white focus:outline-none focus:border-emerald-600 focus:ring-2 focus:ring-emerald-200
   transition-all placeholder:text-gray-400"
-                      placeholder="       +91 98765 43210"
+                      placeholder="+91 98765 43210"
                       required
                       onFocus={() => setFocusedField('phone')}
                       onBlur={() => setFocusedField(null)}
@@ -200,7 +218,7 @@ const handleSubmit = async (e) => {
                     }`} size={20} />
                     <select
                       value={form.travelers}
-                      className="w-full border-2 border-emerald-700 rounded-xl px-4 py-4
+                      className="w-full border-2 border-emerald-700 rounded-xl pl-12 pr-4 py-4
   focus:outline-none focus:border-emerald-600 focus:ring-2 focus:ring-emerald-200
   transition-all placeholder:text-gray-400"
                       placeholder="      Select nummber of travelers"
@@ -355,16 +373,6 @@ const handleSubmit = async (e) => {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes fade-in {
-          from { opacity: 0; transform: translateY(-10px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in {
-          animation: fade-in 0.6s ease-out;
-        }
-      `}</style>
     </main>
   );
 }
