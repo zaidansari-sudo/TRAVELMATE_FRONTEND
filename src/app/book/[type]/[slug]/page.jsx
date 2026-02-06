@@ -76,7 +76,7 @@ const handleSubmit = async (e) => {
     }
 
     // ✅ Redirect ONLY after email is sent
-    router.push(`/book/thank-you?type=${type}&title=${data.title}`);
+    router.push(`/thankyou`);
 
   } catch (error) {
     console.error("Booking Error:", error);

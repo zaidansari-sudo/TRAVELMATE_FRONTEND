@@ -39,9 +39,9 @@ export default function ThankYou() {
           <p className="text-xl text-gray-600 mb-2">
             Your adventure awaits! We've received your booking.
           </p>
-          <p className="text-lg text-gray-500">
+          {/* <p className="text-lg text-gray-500">
             Booking ID: <span className="font-mono font-bold text-emerald-700">#TRV-{Math.floor(Math.random() * 100000)}</span>
-          </p>
+          </p> */}
         </div>
 
         {/* Info Cards */}
