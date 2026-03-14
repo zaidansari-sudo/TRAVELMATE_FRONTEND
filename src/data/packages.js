@@ -62,11 +62,14 @@ export const packages = [
     price: "1,20,000",
 
     images: [
-      "/packages/himalaya1.png",
-      "/packages/himalaya2.png",
-      "/packages/himalaya3.png",
-      "/packages/himalaya4.png",
-      "/packages/himalaya5.png",
+      "/packages/himalayan1.png",
+      "/packages/himalayan2.png",
+      "/packages/himalayan3.png",
+      "/packages/himalayan4.png",
+      "/packages/himalayan5.png",
+      "/packages/himalayan6.png",
+      "/packages/himalayan7.png",
+      "/packages/himalayan8.png",
     ],
 
     overview:
@@ -122,6 +125,9 @@ export const packages = [
       "/packages/spiti3.png",
       "/packages/spiti4.png",
       "/packages/spiti5.png",
+      "/packages/spiti6.png",
+      "/packages/spiti7.png",
+      "/packages/spiti8.png",
     ],
 
     overview:
@@ -214,14 +220,15 @@ export const packages = [
     id: "orchha-chanderi-retreat",
     title: "Orchha & Chanderi Retreat",
     region: "Central India",
-    duration: "6 Days · 5 Nights",
+    duration: "5 Days · 4 Nights",
     price: "78,000",
 
     images: [
-      "/packages/orchha1.png",
-      "/packages/orchha2.png",
-      "/packages/orchha3.png",
-      "/packages/orchha4.png",
+      "/packages/chanderi1.png",
+      "/packages/chanderi2.png",
+      "/packages/chanderi3.png",
+      "/packages/chanderi4.png",
+      "/packages/chanderi5.png",
     ],
 
     overview:
@@ -265,7 +272,7 @@ isFeatured: false,
     id: "ladakh-slow-road-journey",
     title: "Ladakh Slow Road Journey",
     region: "Ladakh",
-    duration: "10 Days · 9 Nights",
+    duration: "7 Days · 6 Nights",
     price: "1,60,000",
 
     images: [
@@ -274,6 +281,9 @@ isFeatured: false,
       "/packages/ladakh3.png",
       "/packages/ladakh4.png",
       "/packages/ladakh5.png",
+      "/packages/ladakh6.png",
+      "/packages/ladakh7.png",
+      "/packages/ladakh8.png",
     ],
 
     overview:

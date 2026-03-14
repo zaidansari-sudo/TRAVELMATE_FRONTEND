@@ -159,10 +159,13 @@ const CuratedExperiences = () => {
           <p className="text-gray-600 mb-6 text-sm md:text-base">
             Can't find what you're looking for? We craft custom experiences tailored to your dreams.
           </p>
-          <button className="group/cta inline-flex items-center gap-3 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg hover:shadow-xl hover:scale-105">
-            <span>Design Your Journey</span>
-            <Sparkles className="w-5 h-5 group-hover/cta:rotate-12 transition-transform" />
-          </button>
+          <Link
+            href="/package"
+            onClick={() => setMenuOpen(false)}
+            className="mt-4 px-12 py-6 rounded-full bg-emerald-700 text-white font-serif font-semibold hover:bg-emerald-800 transition"
+          >
+            Plan Your Journey
+          </Link>
         </div>
       </div>
 

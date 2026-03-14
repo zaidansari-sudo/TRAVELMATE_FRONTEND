@@ -209,7 +209,7 @@ const FeaturedTerritories = () => {
         <div className="mt-16 text-center">
           <div className="inline-flex flex-col items-center gap-4">
             <a
-              href="/packages"
+              href="/package"
               className="group inline-flex items-center gap-3 bg-white border-2 border-emerald-600 text-emerald-700 hover:bg-emerald-600 hover:text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg hover:shadow-xl hover:scale-105 active:scale-95"
             >
               <MapPin className="w-5 h-5" />

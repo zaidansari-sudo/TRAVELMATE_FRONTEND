@@ -23,29 +23,6 @@ const Footer = () => {
         <div className="absolute bottom-0 left-0 w-72 sm:w-96 h-72 sm:h-96 bg-teal-100 rounded-full blur-3xl" />
       </div>
 
-      {/* Top wave decoration */}
-      <div className="absolute top-0 left-0 right-0 overflow-hidden">
-        <svg
-          viewBox="0 0 1440 80"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-full"
-        >
-          <path
-            d="M0 0L60 8C120 16 240 32 360 37.3C480 43 600 37 720 32C840 27 960 21 1080 21.3C1200 21 1320 27 1380 29.3L1440 32V0H1380C1320 0 1200 0 1080 0C960 0 840 0 720 0C600 0 480 0 360 0C240 0 120 0 60 0H0Z"
-            fill="url(#footerGradient)"
-            fillOpacity="0.1"
-          />
-          <defs>
-            <linearGradient id="footerGradient" x1="0" y1="0" x2="1440" y2="0">
-              <stop offset="0%" stopColor="#059669" />
-              <stop offset="50%" stopColor="#14b8a6" />
-              <stop offset="100%" stopColor="#059669" />
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 pt-20 pb-8">
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-start mb-12">
@@ -65,28 +42,6 @@ const Footer = () => {
               cultures, and stories — designed beyond the guidebooks for travelers
               seeking depth, authenticity, and meaning.
             </p>
-
-            {/* Trust badges */}
-            <div className="flex flex-wrap gap-4 justify-center lg:justify-start pt-4">
-              <div className="flex items-center gap-2 bg-white/80 px-4 py-2 rounded-full border border-emerald-100 shadow-sm">
-                <Award className="w-4 h-4 text-emerald-600" />
-                <span className="text-xs font-semibold text-gray-700">
-                  Award Winning
-                </span>
-              </div>
-              <div className="flex items-center gap-2 bg-white/80 px-4 py-2 rounded-full border border-emerald-100 shadow-sm">
-                <Shield className="w-4 h-4 text-emerald-600" />
-                <span className="text-xs font-semibold text-gray-700">
-                  Secure Booking
-                </span>
-              </div>
-              <div className="flex items-center gap-2 bg-white/80 px-4 py-2 rounded-full border border-emerald-100 shadow-sm">
-                <Globe className="w-4 h-4 text-emerald-600" />
-                <span className="text-xs font-semibold text-gray-700">
-                  Global Support
-                </span>
-              </div>
-            </div>
           </div>
 
           {/* Links Section */}
@@ -126,11 +81,11 @@ const Footer = () => {
             </h4>
 
             <div className="space-y-4 text-sm sm:text-base mb-6 flex flex-col items-center sm:items-start lg:items-end font-semibold">
-              <a href="mailto:hello@travelmate.com" className="group flex items-center gap-3 hover:text-emerald-700 transition-colors">
+              <a href="mailto:travelmate@gmail.com" className="group flex items-center gap-3 hover:text-emerald-700 transition-colors">
                 <div className="p-2 bg-emerald-100 rounded-full">
                   <Mail size={16} className="text-emerald-700" />
                 </div>
-                <span>hello@travelmate.com</span>
+                <span>travelmate@gmail.com</span>
               </a>
 
               <a href="tel:+919876543210" className="group flex items-center gap-3 hover:text-emerald-700 transition-colors">
@@ -166,7 +121,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-center md:text-left">
           <p className="text-gray-600 font-medium">
-            © {new Date().getFullYear()} TRAVELMATE. All rights reserved.
+            © 2025 TRAVELMATE. All rights reserved.
           </p>
         </div>
       </div>

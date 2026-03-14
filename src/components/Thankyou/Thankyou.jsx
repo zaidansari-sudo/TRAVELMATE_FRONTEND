@@ -3,9 +3,12 @@
 import { CheckCircle, Mail, Calendar, Download, ArrowRight, Home } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 
 export default function ThankYou() {
   const router = useRouter();
+  const searchParams = useSearchParams();
+const bookingCode = searchParams.get("code");
   const [showContent, setShowContent] = useState(false);
 
   useEffect(() => {
@@ -34,14 +37,19 @@ export default function ThankYou() {
         {/* Main Message */}
         <div className="text-center mb-8">
           <h1 className="text-5xl font-serif font-bold text-gray-900 mb-4">
-            Booking Confirmed!
+            Booking Received!
           </h1>
           <p className="text-xl text-gray-600 mb-2">
-            Your adventure awaits! We've received your booking.
+            We've received your booking request. Our team will confirm it shortly.
           </p>
-          {/* <p className="text-lg text-gray-500">
-            Booking ID: <span className="font-mono font-bold text-emerald-700">#TRV-{Math.floor(Math.random() * 100000)}</span>
-          </p> */}
+          {bookingCode && (
+  <p className="text-lg text-gray-500 mt-2">
+    Booking ID:{" "}
+    <span className="font-mono font-bold text-emerald-700">
+      {bookingCode}
+    </span>
+  </p>
+)}
         </div>
 
         {/* Info Cards */}
@@ -169,3 +177,26 @@ export default function ThankYou() {
     </div>
   );
 }
+
+
+// Since your idea includes:
+
+// AI generated estimated cost based on hotel type, travel mode, days
+
+// You can now:
+
+// Add a form:
+
+// Days
+
+// Hotel type (3/4/5 star)
+
+// Flight / Train
+
+// Travelers
+
+// Calculate cost dynamically
+
+// OR integrate OpenAI API for smart response
+
+// 🔥 This becomes your unique feature.

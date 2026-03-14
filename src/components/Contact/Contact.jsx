@@ -235,17 +235,32 @@ function ContactPage() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="max-w-4xl mx-auto bg-gradient-to-br from-emerald-700 via-teal-600 to-emerald-800 rounded-3xl p-10 md:p-12 shadow-2xl relative overflow-hidden"
+              className="max-w-4xl mx-auto relative rounded-3xl p-10 md:p-12 shadow-2xl overflow-hidden text-white"
             >
-              <div className="flex items-center gap-3 mb-4">
-                <Clock className="w-5 h-5 text-emerald-300" />
-                <h3 className="font-semibold text-lg">Office Hours</h3>
+
+              {/* Gradient Background */}
+              <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-emerald-900 to-teal-900" />
+
+              {/* Subtle Pattern Overlay */}
+              <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjEiIGZpbGw9IndoaXRlIiBmaWxsLW9wYWNpdHk9IjAuMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-30" />
+
+              <div className="relative z-10">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="p-3 bg-emerald-500/20 backdrop-blur-sm rounded-2xl">
+                    <Clock className="w-5 h-5 text-emerald-300" />
+                  </div>
+                  <h3 className="font-serif text-2xl md:text-3xl">
+                    Office Hours
+                  </h3>
+                </div>
+
+                <div className="space-y-3 text-base md:text-lg text-gray-200">
+                  <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                  <p>Saturday: 10:00 AM - 4:00 PM</p>
+                  <p>Sunday: Closed</p>
+                </div>
               </div>
-              <div className="space-y-2 text-sm text-emerald-50">
-                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                <p>Saturday: 10:00 AM - 4:00 PM</p>
-                <p>Sunday: Closed</p>
-              </div>
+
             </motion.div>
           </motion.div>
 
@@ -396,65 +411,70 @@ function ContactPage() {
           </motion.div>
         </div>
       </section>
-      {/* CTA – JOIN OUR JOURNEY (Newsletter) */}
-      <section className="pb-28 px-6">
-        <div className="max-w-4xl mx-auto bg-gradient-to-br from-emerald-700 via-teal-600 to-emerald-800 rounded-3xl p-10 md:p-12 shadow-2xl relative overflow-hidden">
-          {/* Decorative elements */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl" />
+      {/* CTA */}
+      <section className="relative py-24 md:py-28 px-6 text-white overflow-hidden">
 
-          <div className="relative text-center">
-            <div className="inline-block p-3 bg-white/20 rounded-2xl mb-4">
-              <Send className="w-6 h-6 text-white" />
-            </div>
+  {/* Gradient Background */}
+  <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-emerald-900 to-teal-900" />
 
-            <h3 className="font-serif text-3xl md:text-4xl text-white mb-3">
-              Join Our Journey
-            </h3>
+  {/* Subtle Pattern Overlay */}
+  <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjEiIGZpbGw9IndoaXRlIiBmaWxsLW9wYWNpdHk9IjAuMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-30" />
 
-            <p className="text-emerald-50 text-lg mb-8 max-w-2xl mx-auto">
-              Subscribe to receive exclusive travel insights, special offers,
-              and destination guides delivered to your inbox
-            </p>
+  <div className="relative z-10 max-w-4xl mx-auto text-center">
 
-            {!isSubmitted ? (
-              <div className="max-w-md mx-auto">
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <div className="flex-1 relative">
-                    <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-                    <input
-                      type="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      placeholder="Enter your email"
-                      className="w-full pl-12 pr-4 py-4 rounded-full bg-white/95 backdrop-blur-sm border-2 border-white/50 focus:border-white focus:ring-4 focus:ring-white/30 outline-none transition-all text-gray-900 font-medium"
-                    />
-                  </div>
+    <div className="inline-block p-4 bg-emerald-500/20 backdrop-blur-sm rounded-2xl mb-6">
+      <Send className="w-6 h-6 text-emerald-300" />
+    </div>
 
-                  <button
-                    onClick={handleNewsletterSubmit}
-                    className="group bg-white text-emerald-700 px-8 py-4 rounded-full font-bold hover:bg-emerald-50 transition-all shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 flex items-center justify-center gap-2"
-                  >
-                    Subscribe
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </button>
-                </div>
-              </div>
-            ) : (
-              <div className="max-w-md mx-auto bg-white/20 backdrop-blur-sm rounded-2xl p-6 border border-white/30">
-                <div className="flex items-center justify-center gap-3 text-white">
-                  <div className="p-2 bg-white/20 rounded-full">
-                    <Heart className="w-5 h-5 fill-white" />
-                  </div>
-                  <p className="font-semibold text-lg">
-                    Thank you for subscribing!
-                  </p>
-                </div>
-              </div>
-            )}
+    <h3 className="font-serif text-4xl md:text-5xl mb-4">
+      Join Our Journey
+    </h3>
+
+    <p className="text-gray-200 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
+      Subscribe to receive exclusive travel insights, special offers,
+      and destination guides delivered to your inbox
+    </p>
+
+    {!isSubmitted ? (
+      <div className="max-w-md mx-auto">
+        <div className="flex flex-col sm:flex-row gap-4">
+
+          <div className="flex-1 relative">
+            <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter your email"
+              className="w-full pl-12 pr-4 py-4 rounded-full bg-white/95 backdrop-blur-sm border-2 border-white/40 focus:border-emerald-400 focus:ring-4 focus:ring-emerald-400/30 outline-none transition-all text-gray-900 font-medium shadow-lg"
+            />
           </div>
+
+          <button
+            onClick={handleNewsletterSubmit}
+            className="group inline-flex items-center justify-center gap-2 bg-white text-gray-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-emerald-50 transition-all shadow-2xl hover:shadow-emerald-500/50 hover:scale-105 active:scale-95"
+          >
+            Subscribe
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </button>
+
         </div>
-      </section>
+      </div>
+    ) : (
+      <div className="max-w-md mx-auto bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-xl">
+        <div className="flex items-center justify-center gap-3 text-white">
+          <div className="p-2 bg-white/20 rounded-full">
+            <Heart className="w-5 h-5 fill-white" />
+          </div>
+          <p className="font-semibold text-lg">
+            Thank you for subscribing!
+          </p>
+        </div>
+      </div>
+    )}
+
+  </div>
+</section>
     </main>
   );
 }

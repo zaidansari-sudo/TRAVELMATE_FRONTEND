@@ -1,12 +1,16 @@
 import About from "@/components/About/About";
-
-import React from "react";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import WhyUs from "@/components/About/Whyus";
 
 
 const Page = () => {
     return (
         <div>
-            < About/>
+            <Navbar/>
+            <About/>
+            <WhyUs/>
+            <Footer/>
         </div>
     )
 }

@@ -1,18 +1,19 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Mail, Lock, ArrowRight, Plane } from "lucide-react";
+import { Mail, Lock, ArrowRight, Plane, Eye, EyeOff } from "lucide-react";
+import toast from "react-hot-toast";
 import { motion } from "framer-motion";
 import axios from "axios";
-import { useRouter } from "next/navigation"; // ✅ IMPORTANT
+import { useRouter } from "next/navigation";
 
 export default function LoginForm() {
-  const router = useRouter(); // ✅ Router instance
+  const router = useRouter();
 
   const [form, setForm] = useState({ email: "", password: "" });
   const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
-  // ✅ If already logged in → redirect to home
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (token) router.push("/");
@@ -21,28 +22,30 @@ export default function LoginForm() {
   const handleChange = (e) =>
     setForm({ ...form, [e.target.name]: e.target.value });
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setLoading(true);
 
-    try {
-      const API = process.env.NEXT_PUBLIC_API_URL;
-      const res = await axios.post(`${API}/api/auth/login`, form);
+  try {
+    const API = process.env.NEXT_PUBLIC_API_URL;
+    const res = await axios.post(`${API}/api/auth/login`, form);
 
-      console.log("LOGIN SUCCESS:", res.data);
-      alert("Login Successful");
+    toast.success("Login Successful ");
 
-      localStorage.setItem("token", res.data.token);
+    localStorage.setItem("token", res.data.token);
 
-      // ✅ Redirect to app/page.jsx (Home Page)
+    if (res.data.user.isAdmin) {
+      router.push("/admin");
+    } else {
       router.push("/");
-    } catch (err) {
-      console.log(err);
-      alert(err.response?.data?.message || "Login Failed");
     }
 
-    setLoading(false);
-  };
+  } catch (err) {
+    toast.error(err.response?.data?.message || "Login Failed");
+  }
+
+  setLoading(false);
+};
 
   return (
     <main className="min-h-screen flex items-center justify-center bg-slate-50 px-6 relative overflow-hidden">
@@ -101,7 +104,7 @@ export default function LoginForm() {
                 onChange={handleChange}
                 required
                 placeholder="you@example.com"
-                className="w-full pl-12 pr-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-emerald-500 focus:ring-4 focus:ring-emerald-100 outline-none transition-all"
+                className="w-full pl-12 pr-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-emerald-500 focus:ring-4 focus:ring-emerald-100 outline-none transition-all text-slate-900 placeholder:text-slate-400"
               />
             </div>
           </div>
@@ -112,7 +115,7 @@ export default function LoginForm() {
               <label className="text-sm font-medium text-slate-700">
                 Password
               </label>
-              <a className="text-xs text-emerald-600 hover:text-emerald-700 font-medium">
+              <a className="text-xs text-emerald-600 hover:text-emerald-700 font-medium cursor-pointer">
                 Forgot?
               </a>
             </div>
@@ -121,14 +124,26 @@ export default function LoginForm() {
                 <Lock className="w-5 h-5" />
               </div>
               <input
-                type="password"
+                type={showPassword ? "text" : "password"}
                 name="password"
                 value={form.password}
                 onChange={handleChange}
                 required
                 placeholder="Enter your password"
-                className="w-full pl-12 pr-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-emerald-500 focus:ring-4 focus:ring-emerald-100 outline-none transition-all"
+                className="w-full pl-12 pr-12 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-emerald-500 focus:ring-4 focus:ring-emerald-100 outline-none transition-all text-slate-900 placeholder:text-slate-400"
               />
+              <button
+                type="button"
+                onClick={() => setShowPassword((prev) => !prev)}
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-emerald-600 transition-colors focus:outline-none"
+                aria-label={showPassword ? "Hide password" : "Show password"}
+              >
+                {showPassword ? (
+                  <EyeOff className="w-5 h-5" />
+                ) : (
+                  <Eye className="w-5 h-5" />
+                )}
+              </button>
             </div>
           </div>
 

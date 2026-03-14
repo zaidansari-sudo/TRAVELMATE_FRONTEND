@@ -167,57 +167,35 @@ export default function Package() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-emerald-600 py-20">
-        <div className="max-w-4xl mx-auto px-6 text-center text-white">
-          <h2 className="text-4xl font-bold mb-4">Can't Find What You're Looking For?</h2>
-          <p className="text-xl text-emerald-100 mb-8 leading-relaxed">
-            Let us create a custom package tailored to your preferences and budget
-          </p>
-          <Link 
-            href="/contact" 
-            className="inline-flex items-center gap-2 bg-white text-emerald-700 px-8 py-4 rounded-xl font-bold text-lg hover:bg-emerald-50 transition-all shadow-lg hover:shadow-xl"
-          >
-            Contact Us
-            <ArrowRight size={20} />
-          </Link>
-        </div>
-      </section>
+      {/* CTA Section */}
+<section className="relative py-24 md:py-28 px-6 text-center text-white overflow-hidden">
+  
+  {/* Gradient Background */}
+  <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-emerald-900 to-teal-900" />
+  
+  {/* Subtle Pattern Overlay */}
+  <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjEiIGZpbGw9IndoaXRlIiBmaWxsLW9wYWNpdHk9IjAuMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-30" />
 
-      {/* Why Choose Us */}
-      <section className="bg-white py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h3 className="text-4xl font-bold text-gray-900 mb-4">Why Choose TravelMate?</h3>
-            <p className="text-gray-600 text-lg">Experience the difference with India's trusted travel partner</p>
-          </div>
+  <div className="relative z-10 max-w-4xl mx-auto">
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-8 rounded-2xl bg-slate-50 border border-gray-200 hover:border-emerald-300 transition-all">
-              <div className="w-16 h-16 bg-emerald-100 rounded-2xl mx-auto mb-4 flex items-center justify-center">
-                <Calendar size={32} className="text-emerald-600" />
-              </div>
-              <h4 className="text-xl font-bold text-gray-900 mb-3">Flexible Booking</h4>
-              <p className="text-gray-600">Easy rescheduling and cancellation policies for your peace of mind</p>
-            </div>
+    <h2 className="font-serif text-5xl md:text-6xl mb-8 leading-tight">
+      Can't Find What You're Looking For?
+    </h2>
 
-            <div className="text-center p-8 rounded-2xl bg-slate-50 border border-gray-200 hover:border-emerald-300 transition-all">
-              <div className="w-16 h-16 bg-blue-100 rounded-2xl mx-auto mb-4 flex items-center justify-center">
-                <Users size={32} className="text-blue-600" />
-              </div>
-              <h4 className="text-xl font-bold text-gray-900 mb-3">Expert Guides</h4>
-              <p className="text-gray-600">Knowledgeable local guides who bring destinations to life</p>
-            </div>
+    <p className="text-gray-200 max-w-2xl mx-auto mb-12 text-xl leading-relaxed">
+      Let us create a custom package tailored to your preferences and budget
+    </p>
 
-            <div className="text-center p-8 rounded-2xl bg-slate-50 border border-gray-200 hover:border-emerald-300 transition-all">
-              <div className="w-16 h-16 bg-amber-100 rounded-2xl mx-auto mb-4 flex items-center justify-center">
-                <Star size={32} className="text-amber-600" />
-              </div>
-              <h4 className="text-xl font-bold text-gray-900 mb-3">Premium Experience</h4>
-              <p className="text-gray-600">Handpicked accommodations and exclusive experiences</p>
-            </div>
-          </div>
-        </div>
-      </section>
+    <Link
+      href="/contact"
+      className="inline-flex items-center gap-3 bg-white text-gray-900 px-10 py-5 rounded-full font-semibold text-lg hover:bg-emerald-50 transition-all shadow-2xl hover:shadow-emerald-500/50 hover:scale-105"
+    >
+      Contact Us
+      <ArrowRight size={20} />
+    </Link>
+
+  </div>
+</section>
 
       <style jsx>{`
         @keyframes fadeInUp {

@@ -14,51 +14,47 @@ function About() {
 
   return (
     <main className="bg-white text-gray-900 overflow-hidden">
-      {/* HERO with Parallax */}
-      <section className="relative pt-28 md:pt-36 pb-24 md:pb-28 px-6 bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 overflow-hidden">
-        {/* Decorative Elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 right-10 w-72 h-72 bg-emerald-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse" />
-          <div className="absolute bottom-20 left-10 w-96 h-96 bg-teal-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: "1s" }} />
-        </div>
+     {/* HERO */}
+<section className="relative h-[85vh] md:h-screen w-full px-6 overflow-hidden">
 
-        <div className="max-w-5xl mx-auto text-center relative z-10">
-          <div className="inline-block mb-6 animate-fade-in">
-            <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg">
-              <Compass className="w-4 h-4 text-emerald-700" />
-              <span className="text-xs md:text-sm tracking-[0.25em] uppercase text-emerald-700 font-semibold">
-                About TravelMate
-              </span>
-            </div>
-          </div>
+  {/* Background Image */}
+  <img
+    src="https://images.unsplash.com/photo-1548013146-72479768bada?w=1600&q=80"
+    alt="About TravelMate"
+    className="absolute inset-0 h-full w-full object-cover"
+  />
 
-          <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl leading-tight mb-8 bg-gradient-to-r from-gray-900 via-emerald-900 to-gray-900 bg-clip-text text-transparent animate-fade-in-up">
-            Travel Beyond the Obvious
-          </h1>
+  {/* Strong Gradient Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/75" />
 
-          <p className="text-gray-700 text-lg sm:text-xl leading-relaxed max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            TRAVELMATE exists to uncover India beyond the familiar — beyond landmarks,
-            crowds, and predictable itineraries. We bring you closer to the villages,
-            rituals, heritage, and stories that define India's living culture.
-          </p>
+  <div className="relative z-10 flex h-full items-center justify-center">
+    <div className="max-w-4xl text-center text-white px-4 backdrop-blur-[2px]">
 
-          <div className="mt-12 flex flex-wrap justify-center gap-6 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-            {[
-              { icon: MapPin, text: "Hidden Destinations" },
-              { icon: Users, text: "Local Communities" },
-              { icon: Heart, text: "Authentic Experiences" },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="flex items-center gap-3 bg-white/95 backdrop-blur px-5 py-3.5 rounded-full shadow-md hover:shadow-lg transition-all hover:scale-105"
-              >
-                <item.icon className="w-5 h-5 text-emerald-800" />
-                <span className="text-sm text-gray-900 font-semibold tracking-wide">{item.text}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Tagline */}
+      <p className="mb-6 text-xs md:text-sm tracking-[0.4em] uppercase text-emerald-400 font-semibold">
+        ABOUT TRAVELMATE
+      </p>
+
+      {/* Main Heading */}
+      <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold leading-tight drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)]">
+        <span className="block text-white">
+          Travel Beyond
+        </span>
+        <span className="block text-emerald-400">
+          The Obvious
+        </span>
+      </h1>
+
+      {/* Description */}
+      <p className="mt-8 text-base md:text-lg text-gray-200 max-w-2xl mx-auto leading-relaxed font-medium drop-shadow-md">
+        TRAVELMATE exists to uncover India beyond the familiar — beyond landmarks,
+        crowds, and predictable itineraries. We bring you closer to villages,
+        rituals, heritage, and stories that define India’s living culture.
+      </p>
+
+    </div>
+  </div>
+</section>
 
       {/* IMAGE GALLERY SECTION */}
       <section className="py-20 md:py-24 px-6 bg-white">
@@ -79,7 +75,7 @@ function About() {
           {/* Grid of Images */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { img: "https://images.unsplash.com/photo-1548013146-72479768bada?w=600&q=80", span: "md:col-span-2 md:row-span-2" },
+              { img: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1600&q=80", span: "md:col-span-2 md:row-span-2" },
               { img: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80", span: "" },
               { img: "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=600&q=80", span: "" },
               { img: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=600&q=80", span: "" },
@@ -278,61 +274,6 @@ function About() {
         </div>
       </section>
 
-      {/* STATS - More Dynamic */}
-      <section className="py-20 md:py-24 px-6 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-            {[
-              { num: "150+", label: "Hidden Cultural Destinations", color: "from-emerald-600 to-teal-600" },
-              { num: "12+", label: "Years of Exploration", color: "from-teal-600 to-cyan-600" },
-              { num: "98%", label: "Traveler Satisfaction", color: "from-cyan-600 to-blue-600" },
-            ].map((item, i) => (
-              <div key={i} className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-3xl transform group-hover:scale-105 transition-transform duration-300" />
-                <div className="relative bg-white rounded-3xl p-10 shadow-lg hover:shadow-2xl transition-all duration-300 border border-emerald-100">
-                  <div className={`inline-block bg-gradient-to-br ${item.color} bg-clip-text text-transparent font-serif text-5xl md:text-6xl mb-4`}>
-                    {item.num}
-                  </div>
-                  <p className="text-gray-600 font-medium">{item.label}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA - Enhanced */}
-      <section className="relative py-24 md:py-28 px-6 text-center text-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-emerald-900 to-teal-900" />
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjEiIGZpbGw9IndoaXRlIiBmaWxsLW9wYWNpdHk9IjAuMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-30" />
-        
-        <div className="relative z-10 max-w-4xl mx-auto">
-          <div className="inline-block mb-6 bg-emerald-500/20 backdrop-blur-sm px-6 py-2 rounded-full">
-            <p className="text-xs tracking-[0.35em] uppercase text-emerald-300 font-semibold">
-              Begin Your Journey
-            </p>
-          </div>
-
-          <h2 className="font-serif text-5xl md:text-6xl mb-8 leading-tight">
-            Discover India, Differently
-          </h2>
-
-          <p className="text-gray-200 max-w-2xl mx-auto mb-12 text-xl leading-relaxed">
-            Travel deeper. Travel slower. Travel with purpose.
-          </p>
-
-          <a
-            href="/plan-journey"
-            className="inline-flex items-center gap-3 bg-white text-gray-900 px-10 py-5 rounded-full font-semibold text-lg hover:bg-emerald-50 transition-all shadow-2xl hover:shadow-emerald-500/50 hover:scale-105"
-          >
-            Plan Your Journey
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
-        </div>
-      </section>
-
       <style jsx>{`
         @keyframes fade-in {
           from { opacity: 0; }
@@ -363,3 +304,6 @@ function About() {
 }
 
 export default About;
+
+
+// Show booking ID on thankyou page

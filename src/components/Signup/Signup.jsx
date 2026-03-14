@@ -3,6 +3,7 @@ import { useState } from "react";
 import { User, Mail, Lock, Phone, ArrowRight, Plane } from "lucide-react";
 import { motion } from "framer-motion";
 import axios from "axios";
+import toast from "react-hot-toast";
 
 export default function SignupForm() {
   const [form, setForm] = useState({
@@ -25,11 +26,11 @@ export default function SignupForm() {
       const API = process.env.NEXT_PUBLIC_API_URL;
       const res = await axios.post(`${API}/api/auth/signup`, form);
 
-      alert("Signup Successful");
+      toast.success("Account Created Successfully");
       console.log(res.data);
     } catch (err) {
       console.log(err);
-      alert(err.response?.data?.message || "Signup Failed");
+      toast.error(err.response?.data?.message || "Signup Failed");
     }
 
     setLoading(false);

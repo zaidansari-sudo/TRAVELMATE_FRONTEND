@@ -1,17 +1,22 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
+import { usePathname, useRouter } from "next/navigation";
+import { Menu, X, UserCircle, LogOut, User } from "lucide-react";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [profileOpen, setProfileOpen] = useState(false);
+  const profileRef = useRef(null);
   const pathname = usePathname();
+  const router = useRouter();
 
   const isHome =
     pathname === "/" ||
+    pathname.startsWith("/about") ||
     pathname.startsWith("/biketrip") ||
     pathname.startsWith("/package");
 
@@ -25,6 +30,31 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isHome]);
+
+  // Check login status on mount and on route change
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    setIsLoggedIn(!!token);
+  }, [pathname]);
+
+  // Close profile dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (profileRef.current && !profileRef.current.contains(e.target)) {
+        setProfileOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    setIsLoggedIn(false);
+    setProfileOpen(false);
+    setMenuOpen(false);
+    router.push("/");
+  };
 
   return (
     <header
@@ -83,18 +113,91 @@ const Navbar = () => {
         </ul>
 
         {/* Desktop CTA */}
-        <Link
-          href="/login"
-          className={`hidden md:block px-6 py-3 rounded-full font-serif font-semibold transition-all duration-300
-            ${
-              isHome && !scrolled
-                ? "border border-white text-white hover:bg-white hover:text-emerald-900"
-                : "bg-emerald-700 text-white hover:bg-emerald-800"
-            }
-          `}
-        >
-          Plan Your Journey
-        </Link>
+        <div className="hidden md:flex items-center gap-3">
+          <Link
+            href="/login"
+            className={`px-6 py-3 rounded-full font-serif font-semibold transition-all duration-300
+              ${
+                isHome && !scrolled
+                  ? "border border-white text-white hover:bg-white hover:text-emerald-900"
+                  : "bg-emerald-700 text-white hover:bg-emerald-800"
+              }
+            `}
+          >
+            Plan Your Journey
+          </Link>
+
+          {/* Profile Icon (logged in) or Login Button */}
+          {isLoggedIn ? (
+            <div className="relative" ref={profileRef}>
+              <button
+                onClick={() => setProfileOpen(!profileOpen)}
+                className={`flex items-center justify-center w-11 h-11 rounded-full border-2 transition-all duration-300
+                  ${
+                    isHome && !scrolled
+                      ? "border-white text-white hover:bg-white hover:text-emerald-900"
+                      : "border-emerald-700 text-emerald-700 hover:bg-emerald-700 hover:text-white"
+                  }
+                `}
+              >
+                <UserCircle size={24} />
+              </button>
+
+              {/* Dropdown */}
+              {profileOpen && (
+  <div className="absolute right-0 mt-4 w-56 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden z-50 animate-fadeIn">
+    
+    {/* Top Section */}
+    <div className="px-5 py-4 bg-emerald-50 border-b border-emerald-100">
+      <p className="text-sm text-gray-500">Signed in as</p>
+      <p className="text-sm font-semibold text-emerald-700 truncate">
+        {localStorage.getItem("userEmail") || "Traveler"}
+      </p>
+    </div>
+
+    {/* Profile Link */}
+    <Link
+      href="/profile"
+      onClick={() => setProfileOpen(false)}
+      className="flex items-center gap-3 px-5 py-4 text-gray-700 font-medium hover:bg-emerald-50 hover:text-emerald-700 transition-all duration-200"
+    >
+      <div className="w-8 h-8 rounded-lg bg-emerald-100 flex items-center justify-center">
+        <User size={16} className="text-emerald-700" />
+      </div>
+      View Profile
+    </Link>
+
+    {/* Divider */}
+    <div className="border-t border-gray-100" />
+
+    {/* Logout */}
+    <button
+      onClick={handleLogout}
+      className="w-full flex items-center gap-3 px-5 py-4 text-red-500 font-medium hover:bg-red-50 transition-all duration-200"
+    >
+      <div className="w-8 h-8 rounded-lg bg-red-100 flex items-center justify-center">
+        <LogOut size={16} />
+      </div>
+      Log Out
+    </button>
+  </div>
+)}
+            </div>
+          ) : (
+            <Link
+              href="/login"
+              className={`px-5 py-3 rounded-full font-serif font-semibold transition-all duration-300 border-2
+                ${
+                  isHome && !scrolled
+                    ? "border-white text-white hover:bg-white hover:text-emerald-900"
+                    : "border-emerald-700 text-emerald-700 hover:bg-emerald-700 hover:text-white"
+                }
+              `}
+            >
+              Login
+            </Link>
+          )}
+        </div>
 
         {/* Mobile Menu Button */}
         <button
@@ -146,6 +249,35 @@ const Navbar = () => {
           >
             Plan Your Journey
           </Link>
+
+          {/* Mobile Login/Logout */}
+          {isLoggedIn ? (
+            <div className="flex flex-col items-center gap-3 w-full px-8">
+              <Link
+                href="/profile"
+                onClick={() => setMenuOpen(false)}
+                className="w-full text-center px-6 py-3 rounded-full border-2 border-emerald-700 text-emerald-700 font-serif font-semibold hover:bg-emerald-700 hover:text-white transition flex items-center justify-center gap-2"
+              >
+                <User size={18} />
+                View Profile
+              </Link>
+              <button
+                onClick={handleLogout}
+                className="w-full px-6 py-3 rounded-full border-2 border-red-400 text-red-500 font-serif font-semibold hover:bg-red-500 hover:text-white transition flex items-center justify-center gap-2"
+              >
+                <LogOut size={18} />
+                Log Out
+              </button>
+            </div>
+          ) : (
+            <Link
+              href="/login"
+              onClick={() => setMenuOpen(false)}
+              className="px-6 py-3 rounded-full border-2 border-emerald-700 text-emerald-700 font-serif font-semibold hover:bg-emerald-700 hover:text-white transition"
+            >
+              Login
+            </Link>
+          )}
         </ul>
       </div>
     </header>
