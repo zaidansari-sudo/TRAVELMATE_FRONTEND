@@ -32,10 +32,18 @@ const Navbar = () => {
   }, [isHome]);
 
   // Check login status on mount and on route change
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-    setIsLoggedIn(!!token);
-  }, [pathname]);
+useEffect(() => {
+  const token = localStorage.getItem("token");
+  const expiry = localStorage.getItem("tokenExpiry");
+
+  if (token && expiry && Date.now() < expiry) {
+    setIsLoggedIn(true);
+  } else {
+    localStorage.removeItem("token");
+    localStorage.removeItem("tokenExpiry");
+    setIsLoggedIn(false);
+  }
+}, [pathname]);
 
   // Close profile dropdown when clicking outside
   useEffect(() => {

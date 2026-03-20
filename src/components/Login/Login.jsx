@@ -14,10 +14,21 @@ export default function LoginForm() {
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
 
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-    if (token) router.push("/");
-  }, []);
+ useEffect(() => {
+  const token = localStorage.getItem("token");
+  const expiry = localStorage.getItem("tokenExpiry");
+
+  if (token && expiry) {
+    if (Date.now() > expiry) {
+      // expired → clear
+      localStorage.removeItem("token");
+      localStorage.removeItem("tokenExpiry");
+    } else {
+      // valid → redirect
+      router.push("/");
+    }
+  }
+}, []);
 
   const handleChange = (e) =>
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -32,7 +43,10 @@ const handleSubmit = async (e) => {
 
     toast.success("Login Successful ");
 
-    localStorage.setItem("token", res.data.token);
+    const oneDay = 24 * 60 * 60 * 1000;
+
+localStorage.setItem("token", res.data.token);
+localStorage.setItem("tokenExpiry", Date.now() + oneDay);
 
     if (res.data.user.isAdmin) {
       router.push("/admin");

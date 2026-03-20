@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { User, Mail, Lock, Phone, ArrowRight, Plane } from "lucide-react";
 import { motion } from "framer-motion";
 import axios from "axios";
@@ -18,23 +19,27 @@ export default function SignupForm() {
   const handleChange = (e) =>
     setForm({ ...form, [e.target.name]: e.target.value });
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setLoading(true);
 
-    try {
-      const API = process.env.NEXT_PUBLIC_API_URL;
-      const res = await axios.post(`${API}/api/auth/signup`, form);
+  try {
+    const API = process.env.NEXT_PUBLIC_API_URL;
+    const res = await axios.post(`${API}/api/auth/signup`, form);
 
-      toast.success("Account Created Successfully");
-      console.log(res.data);
-    } catch (err) {
-      console.log(err);
-      toast.error(err.response?.data?.message || "Signup Failed");
-    }
+    toast.success("Account Created Successfully");
 
-    setLoading(false);
-  };
+    setTimeout(() => {
+      router.push("/login");
+    }, 1000);
+
+  } catch (err) {
+    console.log(err);
+    toast.error(err.response?.data?.message || "Signup Failed");
+  }
+
+  setLoading(false);
+};
 
   return (
     <main className="min-h-screen flex items-center justify-center bg-slate-50 px-6 relative overflow-hidden">

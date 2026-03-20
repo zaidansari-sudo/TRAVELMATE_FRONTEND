@@ -54,8 +54,8 @@ const Footer = () => {
               <ul className="space-y-3 text-sm sm:text-base font-semibold">
                 <li><a href="/" className={underlineHover}>Home</a></li>
                 <li><a href="/about" className={underlineHover}>About Us</a></li>
-                <li><a href="/packages" className={underlineHover}>Packages</a></li>
-                <li><a href="/biketrips" className={underlineHover}>Bike Trips</a></li>
+                <li><a href="/package" className={underlineHover}>Packages</a></li>
+                <li><a href="/biketrip" className={underlineHover}>Bike Trips</a></li>
                 <li><a href="/contact" className={underlineHover}>Contact</a></li>
               </ul>
             </div>
