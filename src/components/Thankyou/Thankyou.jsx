@@ -1,7 +1,5 @@
 "use client";
 
-export const dynamic = "force-dynamic";
-
 import { CheckCircle, Mail, Calendar, Download, ArrowRight, Home } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -137,14 +135,11 @@ const bookingCode = searchParams.get("code");
             Need help? Contact our support team
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm">
-            <a href="tel:+1234567890" className="text-emerald-700 font-semibold hover:underline">
+            <a href="tel:+91 8591525279" className="text-emerald-700 font-semibold hover:underline">
               +91 8591525279
             </a>
-            <a href="mailto:support@travel.com" className="text-emerald-700 font-semibold hover:underline">
+            <a href="mailto:zaidansari0515@gmail.com" className="text-emerald-700 font-semibold hover:underline">
               hello@travelmate.com
-            </a>
-            <a href="/chat" className="text-emerald-700 font-semibold hover:underline">
-              💬 Live Chat
             </a>
           </div>
         </div>
