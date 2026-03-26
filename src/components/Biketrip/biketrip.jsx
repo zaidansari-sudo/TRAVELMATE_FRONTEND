@@ -115,14 +115,14 @@ function Biketrip() {
                   setIsDropdownOpen(true);
                 }}
                 onFocus={() => setIsDropdownOpen(true)}
-                className="w-full pl-12 pr-10 py-5
+                className={`w-full pl-12 pr-10 py-5
 border-2 border-emerald-500
 rounded-2xl shadow-xl
 focus:outline-none
 focus:ring-4 focus:ring-emerald-500/20
 bg-white text-gray-800
 placeholder-gray-400
-transition-all duration-200"
+transition-all duration-200`}
               />
               {searchQuery && (
                 <button

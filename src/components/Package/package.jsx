@@ -86,25 +86,18 @@ export default function Package() {
                 size={18}
                 className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none z-10"
               />
-              <input
-                ref={inputRef}
-                type="text"
-                placeholder="Search packages by name or destination…"
-                value={searchQuery}
-                onChange={(e) => {
-                  setSearchQuery(e.target.value);
-                  setIsDropdownOpen(true);
-                }}
-                onFocus={() => setIsDropdownOpen(true)}
-                className="w-full pl-12 pr-10 py-5
-border-2 border-emerald-500
-rounded-2xl shadow-xl
-focus:outline-none
-focus:ring-4 focus:ring-emerald-500/20
-bg-white text-gray-800
-placeholder-gray-400
-transition-all duration-200"
-              />
+             <input
+  ref={inputRef}
+  type="text"
+  placeholder="Search packages by name or destination…"
+  value={searchQuery}
+  onChange={(e) => {
+    setSearchQuery(e.target.value);
+    setIsDropdownOpen(true);
+  }}
+  onFocus={() => setIsDropdownOpen(true)}
+  className="w-full pl-12 pr-10 py-5 border-2 border-emerald-500 rounded-2xl shadow-xl focus:outline-none focus:ring-4 focus:ring-emerald-500/20 bg-white text-gray-800 placeholder-gray-400 transition-all duration-200"
+/>
               {searchQuery && (
                 <button
                   onClick={clearSearch}
