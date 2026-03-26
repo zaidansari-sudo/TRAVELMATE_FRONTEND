@@ -80,7 +80,10 @@ export default function Package() {
           </p>
 
           {/* Search Bar with Autocomplete Dropdown — centered inside hero */}
-          <div ref={searchRef} className="relative w-full max-w-2xl mx-auto">
+          <div
+  ref={searchRef}
+  className="relative w-full max-w-2xl mx-auto px-2 sm:px-0"
+>
             <div className="relative">
               <Search
                 size={18}
@@ -96,7 +99,10 @@ export default function Package() {
     setIsDropdownOpen(true);
   }}
   onFocus={() => setIsDropdownOpen(true)}
-  className="w-full pl-12 pr-10 py-5 border-2 border-emerald-500 rounded-2xl shadow-xl focus:outline-none focus:ring-4 focus:ring-emerald-500/20 bg-white text-gray-800 placeholder-gray-400 transition-all duration-200"
+  className="w-full pl-10 sm:pl-12 pr-10 py-3 sm:py-5 text-sm sm:text-base
+border-2 border-emerald-500 rounded-xl sm:rounded-2xl shadow-xl
+focus:outline-none focus:ring-4 focus:ring-emerald-500/20
+bg-white text-gray-800 placeholder-gray-400 transition-all duration-200"
 />
               {searchQuery && (
                 <button
