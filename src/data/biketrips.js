@@ -1,20 +1,26 @@
 export const biketrips = [
 
-  // ─────────────────────────────────────────────
   // 1. MANALI → LEH — The Legendary Highway
-  // ─────────────────────────────────────────────
+
   {
     slug: "manali-leh-bike-expedition",
     title: "Manali to Leh — The Legendary Himalayan Highway",
     location: "Himachal Pradesh & Ladakh",
     duration: "10 Days / 9 Nights",
     price: 32999,
-    heroImage: "/bike/manali-leh-hero.jpg",
+    heroImage: "https://images.unsplash.com/photo-1601920791548-bd0a29f848c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxtYW5hbGklMjBtb3VudGFpbiUyMGhpZ2h3YXl8ZW58MHwwfHx8MTc3NDAwNDYwN3ww&ixlib=rb-4.1.0&q=80&w=1080",
 
     images: [
-      "/bike/manali1.jpg",
-      "/bike/leh1.jpg",
-      "/bike/pangong1.jpg",
+    "https://images.unsplash.com/photo-1658406991919-b5ec4b6adb3f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxwYW5nb25nJTIwbGFrZSUyMGxhZGFraHxlbnwwfDB8fHwxNzc0MDA0NjA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1636790132872-6319f4b378ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxraGFyZHVuZyUyMGxhJTIwcGFzc3xlbnwwfDB8fHwxNzc0MDA0NjEwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1680961554979-1b1033cb7f97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxudWJyYSUyMHZhbGxleSUyMHNhbmQlMjBkdW5lc3xlbnwwfDB8fHwxNzc0MDA0NjEwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1744197068961-18194526c236?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxsZWglMjBtb25hc3RlcnklMjBsYWRha2h8ZW58MHwwfHx8MTc3NDAwNDYxMXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1760443872757-63e867d4029c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxiYWN0cmlhbiUyMGNhbWVsJTIwZGVzZXJ0fGVufDB8MHx8fDE3NzQwMDQ2MTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1580108857809-c56deaf4cf5b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxyb3lhbCUyMGVuZmllbGQlMjBtb3VudGFpbiUyMHJvYWR8ZW58MHwwfHx8MTc3NDAwNDYxM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1681204032871-d385acdc114d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxiYXJhbGFjaGElMjBsYSUyMGhpZ2glMjBhbHRpdHVkZXxlbnwwfDB8fHwxNzc0MDA0NjE0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1695453021608-3520677aec54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxzaGFudGklMjBzdHVwYSUyMGxlaHxlbnwwfDB8fHwxNzc0MDA0NjE0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1739863077094-40897e44e198?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxwYW5nb25nJTIwdHNvJTIwc3VucmlzZXxlbnwwfDB8fHwxNzc0MDA0NjE1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1708945249587-a770a42e68fb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHx0aGlrc2V5JTIwbW9uYXN0ZXJ5JTIwbGFkYWtofGVufDB8MHx8fDE3NzQwMDQ2MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
     ],
 
     overview:
@@ -156,21 +162,21 @@ export const biketrips = [
     bestSeason: "June to September",
   },
 
-  // ─────────────────────────────────────────────
   // 2. SPITI VALLEY — Full Circuit Ride
-  // ─────────────────────────────────────────────
+
   {
     slug: "spiti-valley-circuit-ride",
     title: "Spiti Valley Circuit — The Cold Desert on Two Wheels",
     location: "Himachal Pradesh",
     duration: "9 Days / 8 Nights",
     price: 26999,
-    heroImage: "/bike/spiti-hero.jpg",
-
+    heroImage: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=1600&q=85",
     images: [
-      "/bike/spiti1.jpg",
-      "/bike/key1.jpg",
-      "/bike/chandratal1.jpg",
+      "https://images.unsplash.com/photo-1746035758785-cd04a8984e9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxzcGl0aSUyMHZhbGxleSUyMGNvbGQlMjBkZXNlcnR8ZW58MHwwfHx8MTc3NDAwNDYxN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1723575409854-b8bd40109081?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxrZXklMjBtb25hc3RlcnklMjBzcGl0aXxlbnwwfDB8fHwxNzc0MDA0NjE3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1734375869167-c43693a45b1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxraW5uYXVyJTIwa2FpbGFzaCUyMG1vdW50YWlufGVufDB8MHx8fDE3NzQwMDQ2MjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1579187626396-5a9dc3e09522?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHx0YWJvJTIwbW9uYXN0ZXJ5JTIwYW5jaWVudHxlbnwwfDB8fHwxNzc0MDA0NjIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1746037005251-d1a93cba8f52?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxraWJiZXIlMjB2aWxsYWdlJTIwaGlnaCUyMGFsdGl0dWRlfGVufDB8MHx8fDE3NzQwMDQ2MjJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
     ],
 
     overview:
@@ -302,21 +308,26 @@ export const biketrips = [
     bestSeason: "May to October",
   },
 
-  // ─────────────────────────────────────────────
   // 3. RAJASTHAN — Desert & Heritage Circuit
-  // ─────────────────────────────────────────────
+
   {
     slug: "rajasthan-desert-heritage-ride",
     title: "Rajasthan Desert & Heritage Circuit",
     location: "Rajasthan",
     duration: "9 Days / 8 Nights",
     price: 24999,
-    heroImage: "/bike/rajasthan-hero.jpg",
+    heroImage: "https://images.unsplash.com/photo-1697464026024-046547ebd141?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHx0aGFyJTIwZGVzZXJ0JTIwc2FuZCUyMGR1bmVzJTIwY2FtZWx8ZW58MHwwfHx8MTc3NDAwNDYyN3ww&ixlib=rb-4.1.0&q=80&w=1080",
 
     images: [
-      "/bike/jaisalmer.jpg",
-      "/bike/jodhpur.jpg",
-      "/bike/thar.jpg",
+      "https://images.unsplash.com/photo-1710347454810-e3d493dcc538?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxqYWlzYWxtZXIlMjBnb2xkZW4lMjBmb3J0fGVufDB8MHx8fDE3NzQwMDQ2MjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1642528928091-eb8451e950f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxtZWhyYW5nYXJoJTIwZm9ydCUyMGpvZGhwdXJ8ZW58MHwwfHx8MTc3NDAwNDYyNXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1521182369863-7c68f43ee5cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxqb2RocHVyJTIwYmx1ZSUyMGNpdHl8ZW58MHwwfHx8MTc3NDAwNDYyNnww&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1700756102943-fa388b2ed119?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxzYW0lMjBzYW5kJTIwZHVuZXMlMjBzdW5zZXQlMjByYWphc3RoYW58ZW58MHwwfHx8MTc3NDAwNDYyOHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1710987759549-db4263464211?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHx1ZGFpcHVyJTIwbGFrZSUyMHBhbGFjZXxlbnwwfDB8fHwxNzc0MDA0NjI5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1717329162563-2f93e83cc717?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxjaGl0dG9yZ2FyaCUyMGZvcnR8ZW58MHwwfHx8MTc3NDAwNDYzMHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1674909634726-2a810e89d25c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxiaWthbmVyJTIwanVuYWdhcmglMjBmb3J0fGVufDB8MHx8fDE3NzQwMDQ2MzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1650709244902-04b47a4b4f76?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxyYWphc3RoYW5pJTIwZm9sayUyMGRhbmNlfGVufDB8MHx8fDE3NzQwMDQ2MzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1605425368891-5533a8ede6c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxkZXNlcnQlMjBjYW1wJTIwc3RhcnMlMjByYWphc3RoYW58ZW58MHwwfHx8MTc3NDAwNDYzNHww&ixlib=rb-4.1.0&q=80&w=1080"
     ],
 
     overview:
@@ -442,21 +453,22 @@ export const biketrips = [
     bestSeason: "October to March",
   },
 
-  // ─────────────────────────────────────────────
   // 4. KONKAN COAST — Mumbai to Goa Coastal Highway
-  // ─────────────────────────────────────────────
+
   {
     slug: "konkan-coastal-highway-ride",
     title: "Konkan Coastal Highway — Mumbai to Goa",
     location: "Maharashtra & Goa",
     duration: "7 Days / 6 Nights",
     price: 18999,
-    heroImage: "/bike/konkan-hero.jpg",
+    heroImage: "https://images.unsplash.com/photo-1762530378131-539d2bc49954?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxtdXJ1ZCUyMGphbmppcmElMjBzZWElMjBmb3J0fGVufDB8MHx8fDE3NzQwMDQ2MzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
 
     images: [
-      "/bike/konkan1.jpg",
-      "/bike/tarkarli.jpg",
-      "/bike/goa.jpg",
+    "https://images.unsplash.com/photo-1695541593729-7640b0ea5945?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxzaW5kaHVkdXJnJTIwZm9ydCUyMHNlYXxlbnwwfDB8fHwxNzc0MDA0NjM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1637770577089-608e37d9502c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHx0YXJrYXJsaSUyMGJlYWNoJTIwY2xlYXIlMjB3YXRlcnxlbnwwfDB8fHwxNzc0MDA0NjM3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1594801001182-99ee8f8d5db9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxnb2ElMjBwYWxvbGVtJTIwYmVhY2h8ZW58MHwwfHx8MTc3NDAwNDYzOHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1768728678060-598c3b983b3f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxvbGQlMjBnb2ElMjBiYXNpbGljYXxlbnwwfDB8fHwxNzc0MDA0NjQwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1696235446230-472f19e9a55b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxnb2ElMjBmb250YWluaGFzJTIwcG9ydHVndWVzZXxlbnwwfDB8fHwxNzc0MDA0NjQyfDA&ixlib=rb-4.1.0&q=80&w=1080"
     ],
 
     overview:
@@ -569,24 +581,21 @@ export const biketrips = [
     bestSeason: "October to February",
   },
 
-  // ─────────────────────────────────────────────
   // 5. NORTHEAST — Silk Route + Darjeeling + Kalimpong + Gangtok
-  // ─────────────────────────────────────────────
+
   {
     slug: "northeast-silk-route-darjeeling-ride",
     title: "Darjeeling, Old Silk Route & Gangtok — Eastern Himalaya Ride",
     location: "West Bengal & Sikkim",
     duration: "9 Days / 8 Nights",
     price: 26999,
-    heroImage: "/bike/silkroute-hero.jpg",
+    heroImage: "https://images.unsplash.com/photo-1627118804546-39ffc11a64ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxkYXJqZWVsaW5nJTIwa2FuY2hlbmp1bmdhJTIwc3VucmlzZXxlbnwwfDB8fHwxNzc0MDA0NjQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
 
     images: [
-      "/bike/silk1.jpg",
-      "/bike/zuluk.jpg",
-      "/bike/nathang.jpg",
-      "/bike/darjeeling1.jpg",
-      "/bike/teagarden.jpg",
-      "/bike/kurseong.jpg",
+    "https://images.unsplash.com/photo-1721070025492-26368db1706f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxkYXJqZWVsaW5nJTIwdGVhJTIwZ2FyZGVufGVufDB8MHx8fDE3NzQwMDQ2NDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1660566587182-ca53e9ed9053?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxkYXJqZWVsaW5nJTIwdG95JTIwdHJhaW58ZW58MHwwfHx8MTc3NDAwNDY0NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1741535796028-d50429641bac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHx6dWx1ayUyMHppZ3phZyUyMGhhaXJwaW4lMjBzaWtraW18ZW58MHwwfHx8MTc3NDAwNDY0NXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1668350200913-61ed1101f4d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHx0c29tZ28lMjBjaGFuZ3UlMjBsYWtlJTIwc2lra2ltfGVufDB8MHx8fDE3NzQwMDQ2NDd8MA&ixlib=rb-4.1.0&q=80&w=1080"
     ],
 
     overview:
@@ -715,21 +724,22 @@ export const biketrips = [
     bestSeason: "March to May, October to December",
   },
 
-  // ─────────────────────────────────────────────
+
   // 6. KUTCH — Rann Desert Ride
-  // ─────────────────────────────────────────────
+
   {
     slug: "kutch-rann-desert-ride",
     title: "Rann of Kutch Desert Ride — Bhuj to the White Salt Flats",
     location: "Gujarat",
     duration: "6 Days / 5 Nights",
     price: 18999,
-    heroImage: "/bike/kutch-hero.jpg",
+    heroImage: "https://images.unsplash.com/photo-1706216711069-f9e48c4f3476?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxkaG9sYXZpcmElMjBoYXJhcHBhbiUyMHJ1aW5zfGVufDB8MHx8fDE3NzQwMjcyMDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
 
     images: [
-      "/bike/dholavira.jpg",
-      "/bike/white-rann.jpg",
-      "/bike/tentcity.jpg",
+    "https://images.unsplash.com/photo-1568842602674-d21dadfffddd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxyYW5uJTIwdXRzYXYlMjB0ZW50JTIwY2l0eXxlbnwwfDB8fHwxNzc0MDI3MjA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1711994373914-b83a04eee2e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjB3aWxkJTIwYXNzJTIwbGl0dGxlJTIwcmFubnxlbnwwfDB8fHwxNzc0MDI3MjEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1596933883984-dd6567aa9a33?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxrYWxhJTIwZHVuZ2FyJTIwc3Vuc2V0JTIwa3V0Y2h8ZW58MHwwfHx8MTc3NDAyNzIyMXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1667753192528-bdd294cc9cf5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxiaHVqJTIwcGFsYWNlJTIwZ3VqYXJhdHxlbnwwfDB8fHwxNzc0MDI3MjI0fDA&ixlib=rb-4.1.0&q=80&w=1080"
     ],
 
     overview:
@@ -836,21 +846,24 @@ export const biketrips = [
     bestSeason: "November to February",
   },
 
-  // ─────────────────────────────────────────────
+
   // 7. MAHARASHTRA GHATS — Anuskura + Amboli + Amba Ghat Circuit
-  // ─────────────────────────────────────────────
+
   {
     slug: "maharashtra-ghats-adventure-ride",
     title: "Maharashtra Western Ghats Circuit — Anuskura, Amboli & Amba",
     location: "Maharashtra",
     duration: "4 Days / 3 Nights",
     price: 11999,
-    heroImage: "/bike/anuskura-hero.jpg",
+    heroImage: "https://images.unsplash.com/photo-1619260584294-8a4e63f5ade5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHx3ZXN0ZXJuJTIwZ2hhdHMlMjBsdXNoJTIwZ3JlZW4lMjByb2FkfGVufDB8MHx8fDE3NzQwMjcyMzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
 
     images: [
-      "/bike/anuskura1.jpg",
-      "/bike/ghat.jpg",
-      "/bike/konkan-road.jpg",
+    "https://images.unsplash.com/photo-1521206644285-8db1549e484f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxhbWJvbGklMjB3YXRlcmZhbGwlMjBtYWhhcmFzaHRyYXxlbnwwfDB8fHwxNzc0MDI3MjM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1708589413921-87e9cf84fbbe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxnaGF0JTIwcm9hZCUyMHN3aXRjaGJhY2slMjBzYWh5YWRyaXxlbnwwfDB8fHwxNzc0MDI3MjM5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1712231895847-8ec9919f49b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxrb2xoYXB1ciUyMHRlbXBsZSUyMG1haGFyYXNodHJhfGVufDB8MHx8fDE3NzQwMjcyNDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1726764186610-a1b2f25455fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxzYXdhbnR3YWRpJTIwcGFsYWNlJTIwbWFoYXJhc2h0cmF8ZW58MHwwfHx8MTc3NDAyNzI0OHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1702799464926-b5fb08efe25d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxtYWx2YW4lMjBiZWFjaCUyMHNpbmRodWR1cmd8ZW58MHwwfHx8MTc3NDAyNzI1MXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1571294862719-42e5da5bd402?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxtaXN0eSUyMGdoYXQlMjBtb3JuaW5nJTIwZm9nfGVufDB8MHx8fDE3NzQwMjcyNTh8MA&ixlib=rb-4.1.0&q=80&w=1080"
     ],
 
     overview:
@@ -940,21 +953,23 @@ export const biketrips = [
     bestSeason: "October to February",
   },
 
-  // ─────────────────────────────────────────────
   // 8. TAMIL NADU — Kolli Hills + Yercaud + Valparai Circuit
-  // ─────────────────────────────────────────────
+
   {
     slug: "tamil-nadu-hills-ride",
     title: "Tamil Nadu Hill Circuits — Kolli, Yercaud & Valparai",
     location: "Tamil Nadu",
     duration: "5 Days / 4 Nights",
     price: 13999,
-    heroImage: "/bike/kolli-hero.jpg",
+    heroImage: "https://images.unsplash.com/photo-1588356295620-3a53c9e50ba9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxjb2ltYmF0b3JlJTIwaGlsbHMlMjByb2FkfGVufDB8MHx8fDE3NzQwMjcyODV8MA&ixlib=rb-4.1.0&q=80&w=1080",
 
     images: [
-      "/bike/kolli1.jpg",
-      "/bike/kolli2.jpg",
-      "/bike/kolli3.jpg",
+      "https://images.unsplash.com/photo-1567187562211-431720edfc61?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHx3aWxkJTIwZWxlcGhhbnQlMjByb2FkJTIwY3Jvc3Npbmd8ZW58MHwwfHx8MTc3NDAyNzI3M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1733052554986-e1ab19eebf85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDQ1Mjl8MHwxfHNlYXJjaHwxfHxrb2xsaSUyMGhpbGxzJTIwNzAlMjBoYWlycGluJTIwYmVuZHN8ZW58MHwwfHx8MTc3NDM0ODc5N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1595048697921-c477b0a1c0a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDQ1Mjl8MHwxfHNlYXJjaHwxfHx2YWxwYXJhaSUyMDQwJTIwaGFpcnBpbiUyMGJlbmRzJTIwcm9hZHxlbnwwfDB8fHwxNzc0MzQ4ODA1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1709744876813-3eeda0c6a2a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDQ1Mjl8MHwxfHNlYXJjaHwxfHx0YW1pbCUyMG5hZHUlMjBoaWxsJTIwcm9hZCUyMG1vdG9yY3ljbGV8ZW58MHwwfHx8MTc3NDM0ODgyN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1722089251759-9070758ec65c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDQ1Mjl8MHwxfHNlYXJjaHwxfHx2YWxwYXJhaSUyMHRlYSUyMGVzdGF0ZSUyMHJvYWQlMjBmb2d8ZW58MHwwfHx8MTc3NDM0ODg1MHww&ixlib=rb-4.1.0&q=80&w=1080"
+    
     ],
 
     overview:
@@ -1051,21 +1066,23 @@ export const biketrips = [
     bestSeason: "October to March",
   },
 
-  // ─────────────────────────────────────────────
   // 9. ZANSKAR VALLEY — The Last Frontier
-  // ─────────────────────────────────────────────
+
   {
     slug: "zanskar-valley-bike-expedition",
     title: "Zanskar Valley — India's Most Remote Motorcycle Route",
     location: "Ladakh (Zanskar)",
     duration: "10 Days / 9 Nights",
     price: 36999,
-    heroImage: "/bike/zanskar-hero.jpg",
+    heroImage: "https://images.unsplash.com/photo-1707928930919-2b479a4999cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHx6YW5za2FyJTIwcml2ZXIlMjBnb3JnZSUyMHR1cnF1b2lzZXxlbnwwfDB8fHwxNzc0MDI3Mjg4fDA&ixlib=rb-4.1.0&q=80&w=1080",
 
     images: [
-      "/bike/zanskar1.jpg",
-      "/bike/padum1.jpg",
-      "/bike/chadar1.jpg",
+    "https://images.unsplash.com/photo-1643052651442-ae8fbcf58771?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxwZW5zaSUyMGxhJTIwcGFzcyUyMGdsYWNpZXJ8ZW58MHwwfHx8MTc3NDAyNzMwMXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1696706023389-812d9761e1bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxkcmFuZyUyMGRydW5nJTIwZ2xhY2llcnxlbnwwfDB8fHwxNzc0MDI3MzA0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1730997341763-e796a422ce8f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxzdXJ1JTIwdmFsbGV5JTIwbnVuJTIwa3VuJTIwZ2xhY2llcnxlbnwwfDB8fHwxNzc0MDI3MzA3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1618652578304-6ec70d46fa22?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxrYXJnaWwlMjBsYWRha2h8ZW58MHwwfHx8MTc3NDAyNzMxM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1707928930919-2b479a4999cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHx6YW5za2FyJTIwaW5kdXMlMjBjb25mbHVlbmNlfGVufDB8MHx8fDE3NzQwMjczMTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1768410318080-57c4426dbe25?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxoaW1hbGF5YW4lMjBtb3RvcmN5Y2xlJTIwZXhwZWRpdGlvbnxlbnwwfDB8fHwxNzc0MDI3MzIyfDA&ixlib=rb-4.1.0&q=80&w=1080"
     ],
 
     overview:
@@ -1212,22 +1229,23 @@ export const biketrips = [
     bestSeason: "July to early September",
   },
 
-  // ─────────────────────────────────────────────
   // 10. NORTHEAST INDIA — Meghalaya + Nagaland + Manipur
   //     The Living Root Bridges & Warrior Tribes Circuit
-  // ─────────────────────────────────────────────
+
   {
     slug: "northeast-tribal-circuit-ride",
     title: "Northeast Tribal Circuit — Meghalaya, Nagaland & Manipur",
     location: "Meghalaya, Nagaland & Manipur",
     duration: "11 Days / 10 Nights",
     price: 34999,
-    heroImage: "/bike/meghalaya-hero.jpg",
+    heroImage: "https://images.unsplash.com/photo-1762707675084-01ac3bd4e9f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxsaXZpbmclMjByb290JTIwYnJpZGdlJTIwbWVnaGFsYXlhfGVufDB8MHx8fDE3NzQwMjczMjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
 
     images: [
-      "/bike/livingroot.jpg",
-      "/bike/hornbill.jpg",
-      "/bike/loktak.jpg",
+    "https://images.unsplash.com/photo-1715939050928-c504fc215456?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxkYXdraSUyMHJpdmVyJTIwY3J5c3RhbCUyMGNsZWFyfGVufDB8MHx8fDE3NzQwMjczMjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1718791206295-e184da20df06?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxub2hrYWxpa2FpJTIwZmFsbHMlMjBtZWdoYWxheWF8ZW58MHwwfHx8MTc3NDAyNzMzNXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1700042629181-e6b100894f6f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxob3JuYmlsbCUyMGZlc3RpdmFsJTIwbmFnYWxhbmR8ZW58MHwwfHx8MTc3NDAyNzM0MXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1712055196088-9bc6da4ffbce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxkenVrb3UlMjB2YWxsZXklMjB3aWxkZmxvd2Vyc3xlbnwwfDB8fHwxNzc0MDI3MzQ3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1594513986731-3facac274fae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDA5MjV8MHwxfHNlYXJjaHwxfHxzaGlsbG9uZyUyMG1lZ2hhbGF5YSUyMGhpbGxzfGVufDB8MHx8fDE3NzQwMjczNTN8MA&ixlib=rb-4.1.0&q=80&w=1080"
     ],
 
     overview:
@@ -1376,21 +1394,22 @@ export const biketrips = [
     bestSeason: "October to March",
   },
 
-  // ─────────────────────────────────────────────
+ 
   // 11. ANDAMAN ISLANDS — The Archipelago Ride
-  // ─────────────────────────────────────────────
+
   {
     slug: "andaman-islands-ride",
     title: "Andaman Archipelago Ride — South to North Andaman",
     location: "Andaman & Nicobar Islands",
     duration: "7 Days / 6 Nights",
     price: 22999,
-    heroImage: "/bike/andaman-hero.jpg",
+    heroImage:"https://images.unsplash.com/photo-1643276715815-31251ab3909f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDQ1Mjl8MHwxfHNlYXJjaHwxfHxhbmRhbWFuJTIwYmVhY2glMjB3aGl0ZSUyMHNhbmQlMjB0dXJxdW9pc2V8ZW58MHwwfHx8MTc3NDM0NjgwNXww&ixlib=rb-4.1.0&q=80&w=1080",
 
     images: [
-      "/bike/radhanagar.jpg",
-      "/bike/andaman-forest.jpg",
-      "/bike/havelock.jpg",
+    "https://images.unsplash.com/photo-1599325601321-824fc3e34ea9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDQ1Mjl8MHwxfHNlYXJjaHwxfHxjZWxsdWxhciUyMGphaWwlMjBwb3J0JTIwYmxhaXJ8ZW58MHwwfHx8MTc3NDM0NjgyMHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1721834058855-b9d0570722b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDQ1Mjl8MHwxfHNlYXJjaHwxfHxhbmRhbWFuJTIwc2VhJTIwdHJvcGljYWx8ZW58MHwwfHx8MTc3NDM0Njg0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1603946980186-6649fd2704d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDQ1Mjl8MHwxfHNlYXJjaHwxfHxyb3NzJTIwaXNsYW5kJTIwcnVpbnMlMjBhbmRhbWFufGVufDB8MHx8fDE3NzQzNDY4NTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1710790980317-7662c3c197e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDQ1Mjl8MHwxfHNlYXJjaHwxfHxhbmRhbWFuJTIwaXNsYW5kJTIwc3Vuc2V0fGVufDB8MHx8fDE3NzQzNDY4NzR8MA&ixlib=rb-4.1.0&q=80&w=1080"
     ],
 
     overview:
@@ -1515,22 +1534,25 @@ export const biketrips = [
     bestSeason: "October to May",
   },
 
-  // ─────────────────────────────────────────────
   // 12. KERALA — The God's Own Country Circuit
   //     Munnar + Wayanad + Coorg + Ooty Loop
-  // ─────────────────────────────────────────────
+
   {
     slug: "kerala-western-ghats-ride",
     title: "Kerala & Western Ghats Circuit — Munnar, Wayanad & Coorg",
     location: "Kerala, Karnataka & Tamil Nadu",
     duration: "8 Days / 7 Nights",
     price: 21999,
-    heroImage: "/bike/munnar-hero.jpg",
+    heroImage: "https://images.unsplash.com/photo-1742286087579-fcaa5ed24c35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDQ1Mjl8MHwxfHNlYXJjaHwxfHxtdW5uYXIlMjB0ZWElMjBnYXJkZW4lMjBrZXJhbGF8ZW58MHwwfHx8MTc3NDM0Njg4Mnww&ixlib=rb-4.1.0&q=80&w=1080",
 
     images: [
-      "/bike/munnar1.jpg",
-      "/bike/wayanad.jpg",
-      "/bike/coorg.jpg",
+    "https://images.unsplash.com/photo-1574423886860-a27bb1814f28?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDQ1Mjl8MHwxfHNlYXJjaHwxfHxlcmF2aWt1bGFtJTIwbmlsZ2lyaSUyMHRhaHJ8ZW58MHwwfHx8MTc3NDM0Njg4OXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1653992894965-abc73a9f7aff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDQ1Mjl8MHwxfHNlYXJjaHwxfHx3YXlhbmFkJTIwZm9yZXN0JTIwa2VyYWxhfGVufDB8MHx8fDE3NzQzNDY4OTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1747801972326-b40678b35815?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDQ1Mjl8MHwxfHNlYXJjaHwxfHxjaGVtYnJhJTIwcGVhayUyMHRyZWslMjB3YXlhbmFkfGVufDB8MHx8fDE3NzQzNDY5MDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1710612198146-77512950a4b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDQ1Mjl8MHwxfHNlYXJjaHwxfHxjb29yZyUyMGNvZmZlZSUyMHBsYW50YXRpb258ZW58MHwwfHx8MTc3NDM0NjkxMnww&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1699819847996-a5bd6365778a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDQ1Mjl8MHwxfHNlYXJjaHwxfHxhYmJleSUyMGZhbGxzJTIwY29vcmd8ZW58MHwwfHx8MTc3NDM0NjkyMHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1614698561117-83d9053f4c14?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDQ1Mjl8MHwxfHNlYXJjaHwxfHxkdWJhcmUlMjBlbGVwaGFudCUyMGNhbXAlMjBrYXZlcml8ZW58MHwwfHx8MTc3NDM0NjkyN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1655895348625-5d9d7a366350?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDQ1Mjl8MHwxfHNlYXJjaHwxfHxkb2RkYWJldHRhJTIwcGVhayUyMG9vdHl8ZW58MHwwfHx8MTc3NDM0Njk2NXww&ixlib=rb-4.1.0&q=80&w=1080"
     ],
 
     overview:

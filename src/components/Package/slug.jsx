@@ -299,16 +299,8 @@ export default function PackageDetails() {
               LIMITED TIME OFFER
             </div>
             <h2 className="text-3xl font-serif font-bold mb-4 text-gray-900">Ready for an Adventure?</h2>
-            <p className="text-gray-700 mb-8 max-w-2xl mx-auto text-lg">
-              Book now and save 15% on your dream vacation. Limited spots available for this month!
-            </p>
-            
             <div className="flex items-center justify-center gap-4 mb-8">
               <div className="text-left">
-                <p className="text-sm text-gray-500 line-through">
-  {"₹45,999"}
-</p>
-
                 <p className="text-5xl font-bold text-emerald-700">{pkg.price}</p>
                 <p className="text-sm text-gray-600 font-medium">per person</p>
               </div>

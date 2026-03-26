@@ -400,11 +400,6 @@ function ContactPage() {
                     <p className="text-2xl font-serif text-emerald-700">100%</p>
                     <p className="text-xs text-gray-500">Secure</p>
                   </div>
-                  <div className="w-px h-10 bg-gray-200" />
-                  <div>
-                    <p className="text-2xl font-serif text-emerald-700">500+</p>
-                    <p className="text-xs text-gray-500">Happy Travelers</p>
-                  </div>
                 </div>
               </div>
             </div>

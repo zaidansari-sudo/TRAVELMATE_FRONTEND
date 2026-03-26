@@ -172,10 +172,6 @@ export default function BiketripDetails() {
                   <span>{trip.difficulty}</span>
                 </div>
               )}
-              <div className="flex items-center gap-2">
-                <Star size={20} className="text-yellow-400 fill-yellow-400" />
-                <span>4.8 (120 reviews)</span>
-              </div>
             </div>
           </div>
         </div>
@@ -269,19 +265,19 @@ export default function BiketripDetails() {
             <h3 className="font-bold text-lg mb-4 text-gray-900">Trip Details</h3>
             <div className="flex flex-wrap gap-3">
               {trip.startPoint && (
-                <span className="bg-amber-100 text-amber-800 px-4 py-2 rounded-lg text-sm font-semibold border border-amber-300">
-                  🏁 Start: {trip.startPoint}
-                </span>
+                <span className="bg-amber-500/10 text-amber-700 px-4 py-2 rounded-lg text-sm font-semibold border border-amber-400 flex items-center gap-2">
+🏁 Start: {trip.startPoint}
+</span>
               )}
               {trip.endPoint && (
-                <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-lg text-sm font-semibold border border-blue-300">
-                  🏴 End: {trip.endPoint}
-                </span>
+                <span className="bg-blue-500/10 text-blue-700 px-4 py-2 rounded-lg text-sm font-semibold border border-blue-400 flex items-center gap-2">
+🏴 End: {trip.endPoint}
+</span>
               )}
               {trip.difficulty && (
-                <span className="bg-red-100 text-red-800 px-4 py-2 rounded-lg text-sm font-semibold border border-red-300">
-                  ⚡ {trip.difficulty}
-                </span>
+                <span className="bg-red-500/10 text-red-700 px-4 py-2 rounded-lg text-sm font-semibold border border-red-400 flex items-center gap-2">
+⚡ {trip.difficulty}
+</span>
               )}
             </div>
           </div>
@@ -479,26 +475,6 @@ export default function BiketripDetails() {
       {/* ════════════════════════════════════════════════
           WHY CHOOSE US
       ════════════════════════════════════════════════ */}
-      <section className="py-16 bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { Icon: Shield,       bg: "bg-emerald-50", border: "border-emerald-200", hover: "group-hover:border-emerald-600", icon: "text-emerald-600", title: "Safety First",   desc: "Certified guides & equipment"      },
-              { Icon: Award,        bg: "bg-blue-50",    border: "border-blue-200",    hover: "group-hover:border-blue-600",    icon: "text-blue-600",    title: "15+ Years",     desc: "Experience in adventure tourism"   },
-              { Icon: Users,        bg: "bg-amber-50",   border: "border-amber-200",   hover: "group-hover:border-amber-600",   icon: "text-amber-600",   title: "5000+ Riders",  desc: "Successfully completed trips"      },
-              { Icon: CheckCircle,  bg: "bg-purple-50",  border: "border-purple-200",  hover: "group-hover:border-purple-600",  icon: "text-purple-600",  title: "100% Support",  desc: "24/7 assistance during trip"       },
-            ].map(({ Icon, bg, border, hover, icon, title, desc }, i) => (
-              <div key={i} className="text-center group">
-                <div className={`w-16 h-16 ${bg} border-2 ${border} ${hover} rounded-2xl mx-auto mb-4 flex items-center justify-center transition-colors`}>
-                  <Icon size={28} className={icon} />
-                </div>
-                <h4 className="font-bold text-gray-900 mb-2">{title}</h4>
-                <p className="text-sm text-gray-600">{desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ════════════════════════════════════════════════
           PRICE CTA
@@ -535,15 +511,9 @@ export default function BiketripDetails() {
                 </button>
               </Link>
             </div>
-
-            <div className="flex items-center justify-center gap-2 text-sm text-gray-600 mt-6">
-              <Phone size={16} className="text-emerald-600" />
-              <span>Call us: <span className="font-semibold text-gray-900">+91 90015 04000</span></span>
-            </div>
           </div>
         </div>
       </section>
-
     </main>
   );
 }

@@ -91,7 +91,7 @@ const WhyUs = () => {
           {/* Right - Stats Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-6">
             {[
-              { value: "50+", label: "Hidden Destinations", icon: Map, trend: "+25 this year" },
+              { value: "50+", label: "Hidden Destinations", icon: Map, trend: "" },
               { value: "1+", label: "Years of Expertise", icon: TrendingUp, trend: "Since 2025" },
               { value: "98%", label: "Guest Satisfaction", icon: Star, trend: "5-star reviews" },
             ].map((stat, i) => {
