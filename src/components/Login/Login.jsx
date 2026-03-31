@@ -38,7 +38,7 @@ const handleSubmit = async (e) => {
   setLoading(true);
 
   try {
-    const API = process.env.NEXT_PUBLIC_API_URL;
+   const API = process.env.NEXT_PUBLIC_API_URL;
     const res = await axios.post(`${API}/api/auth/login`, form);
 
     toast.success("Login Successful ");

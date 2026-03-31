@@ -16,6 +16,8 @@ export default function SignupForm() {
 
   const [loading, setLoading] = useState(false);
 
+  const router = useRouter();
+
   const handleChange = (e) =>
     setForm({ ...form, [e.target.name]: e.target.value });
 
@@ -24,7 +26,7 @@ const handleSubmit = async (e) => {
   setLoading(true);
 
   try {
-    const API = process.env.NEXT_PUBLIC_API_URL;
+    const API = process.env.NEXT_PUBLIC_API_URL;;
     const res = await axios.post(`${API}/api/auth/signup`, form);
 
     toast.success("Account Created Successfully");
