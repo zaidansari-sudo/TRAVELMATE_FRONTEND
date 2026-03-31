@@ -99,10 +99,7 @@ export default function Package() {
     setIsDropdownOpen(true);
   }}
   onFocus={() => setIsDropdownOpen(true)}
-  className="w-full pl-10 sm:pl-12 pr-10 py-3 sm:py-5 text-sm sm:text-base
-border-2 border-emerald-500 rounded-xl sm:rounded-2xl shadow-xl
-focus:outline-none focus:ring-4 focus:ring-emerald-500/20
-bg-white text-gray-800 placeholder-gray-400 transition-all duration-200"
+  className="w-full pl-10 sm:pl-12 pr-10 py-3 sm:py-5 text-sm sm:text-base border-2 border-emerald-500 rounded-xl sm:rounded-2xl shadow-xl focus:outline-none focus:ring-4 focus:ring-emerald-500/20 bg-white text-gray-800 placeholder-gray-400 transition-all duration-200"
 />
               {searchQuery && (
                 <button
