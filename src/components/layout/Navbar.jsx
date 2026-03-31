@@ -122,7 +122,7 @@ useEffect(() => {
 
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-3">
-          <Link
+          {/* <Link
             href="/login"
             className={`px-6 py-3 rounded-full font-serif font-semibold transition-all duration-300
               ${
@@ -133,7 +133,7 @@ useEffect(() => {
             `}
           >
             Plan Your Journey
-          </Link>
+          </Link> */}
 
           {/* Profile Icon (logged in) or Login Button */}
           {isLoggedIn ? (
