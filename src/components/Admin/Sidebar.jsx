@@ -56,10 +56,10 @@ export default function Sidebar() {
           Cancelled
         </Link>
 
-         {/* <Link href="/admin/history" className={menuItem("/admin/cancelled")}>
+         <Link href="/admin/history" className={menuItem("/admin/cancelled")}>
           <XCircle size={18} />
           History
-        </Link> */}
+        </Link>
 
       </nav>
 
